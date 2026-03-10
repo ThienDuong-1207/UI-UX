@@ -1,0 +1,39 @@
+:root {
+  --primary-color: #0D6EFD;
+  --secondary-bg: #F8F9FA;
+  --tertiary-bg: #E7F1FF;
+  --footer-bg: #052C65;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #FFFFFF !important; /* Force white background */
+  color: #333;
+}
+
+/* Clean up default Vite styles */
+#root {
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+
+/* Hover effects */
+.hover-effect {
+  transition: all 0.3s ease;
+}
+
+.hover-opacity {
+  transition: opacity 0.2s;
+}
+
+.hover-opacity:hover {
+  opacity: 0.8;
+}
+
+/* Search Bar Focus Override */
+.form-select:focus, .form-control:focus {
+  border-color: #0D6EFD;
+  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}

@@ -16,6 +16,7 @@ A modern, responsive coffee e-commerce website showcasing premium coffee product
 - Fully responsive layout
 - Pure CSS animations and effects
 - Professional coffee shop aesthetics
+- Website link: https://ui-ux-sand-nu.vercel.app/
 
 **Live Demo:** Open `index.html` in your browser
 
