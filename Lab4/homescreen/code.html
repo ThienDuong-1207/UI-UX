@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>TechGear | High-Performance Computing</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;family=JetBrains+Mono:wght@500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-fixed-variant": "#004395",
+                        "surface-bright": "#fcf8fa",
+                        "on-primary": "#ffffff",
+                        "inverse-primary": "#bec6e0",
+                        "on-error": "#ffffff",
+                        "tertiary-fixed": "#fcdeb5",
+                        "on-surface-variant": "#45464d",
+                        "tertiary-fixed-dim": "#dec29a",
+                        "secondary-fixed": "#d8e2ff",
+                        "inverse-surface": "#303032",
+                        "surface": "#fcf8fa",
+                        "on-tertiary": "#ffffff",
+                        "secondary-container": "#2170e4",
+                        "on-tertiary-fixed-variant": "#574425",
+                        "on-secondary": "#ffffff",
+                        "primary": "#000000",
+                        "outline-variant": "#c6c6cd",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary": "#000000",
+                        "on-primary-fixed-variant": "#3f465c",
+                        "tertiary-container": "#271901",
+                        "on-primary-container": "#7c839b",
+                        "on-secondary-container": "#fefcff",
+                        "secondary-fixed-dim": "#adc6ff",
+                        "surface-container": "#f0edef",
+                        "inverse-on-surface": "#f3f0f2",
+                        "on-tertiary-container": "#98805d",
+                        "on-primary-fixed": "#131b2e",
+                        "surface-container-high": "#eae7e9",
+                        "primary-container": "#131b2e",
+                        "on-error-container": "#93000a",
+                        "primary-fixed-dim": "#bec6e0",
+                        "surface-dim": "#dcd9db",
+                        "on-tertiary-fixed": "#271901",
+                        "secondary": "#0058be",
+                        "surface-container-highest": "#e4e2e4",
+                        "error-container": "#ffdad6",
+                        "on-surface": "#1b1b1d",
+                        "outline": "#76777d",
+                        "surface-container-low": "#f6f3f5",
+                        "surface-tint": "#565e74",
+                        "surface-variant": "#e4e2e4",
+                        "primary-fixed": "#dae2fd",
+                        "on-background": "#1b1b1d",
+                        "error": "#ba1a1a",
+                        "on-secondary-fixed": "#001a42",
+                        "background": "#fcf8fa"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "container-max": "1280px",
+                        "md": "24px",
+                        "base": "4px",
+                        "sm": "16px",
+                        "xl": "80px",
+                        "lg": "48px",
+                        "gutter": "24px",
+                        "xs": "8px"
+                    },
+                    "fontFamily": {
+                        "h1": ["Inter"],
+                        "h3": ["Inter"],
+                        "price-sm": ["JetBrains Mono"],
+                        "h2": ["Inter"],
+                        "price-lg": ["JetBrains Mono"],
+                        "body": ["Inter"],
+                        "label-caps": ["Inter"]
+                    },
+                    "fontSize": {
+                        "h1": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "h3": ["20px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                        "price-sm": ["16px", {"lineHeight": "1", "fontWeight": "500"}],
+                        "h2": ["24px", {"lineHeight": "1.3", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "price-lg": ["24px", {"lineHeight": "1", "fontWeight": "600"}],
+                        "body": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "700"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+            text-transform: none;
+            letter-spacing: normal;
+            word-wrap: normal;
+            white-space: nowrap;
+            direction: ltr;
+        }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background font-body text-on-background antialiased">
+<!-- TopAppBar -->
+<header class="fixed top-0 left-0 w-full z-50 bg-white border-b border-slate-200">
+<div class="flex justify-between items-center w-full px-6 py-4 max-w-7xl mx-auto font-['Inter'] antialiased tracking-tight">
+<div class="flex items-center gap-xs">
+<span class="material-symbols-outlined text-slate-900" data-icon="laptop_chromebook">laptop_chromebook</span>
+<h1 class="text-xl font-black tracking-tighter text-slate-900 uppercase">TechGear</h1>
+</div>
+<!-- Prominent Search Bar (Desktop) -->
+<div class="hidden md:flex flex-1 max-w-xl mx-gutter">
+<div class="relative w-full">
+<input class="w-full pl-10 pr-4 py-2 bg-surface-container-low border border-outline-variant rounded focus:ring-2 focus:ring-secondary focus:border-secondary outline-none text-body" placeholder="Search latest hardware..." type="text"/>
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline" data-icon="search">search</span>
+</div>
+</div>
+<div class="flex items-center gap-sm">
+<button class="text-slate-500 hover:bg-slate-50 transition-colors p-2 rounded active:scale-95 duration-150">
+<span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span>
+</button>
+<button class="md:hidden text-slate-500 p-2">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+</div>
+</div>
+</header>
+<main class="pt-[72px] pb-24 md:pb-12">
+<!-- Hero Section -->
+<section class="relative w-full aspect-[21/9] min-h-[400px] flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover" data-alt="high-end gaming laptop with glowing RGB keyboard on dark tech desk with futuristic cyan ambient lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDM1B_nAfvZ5rjr8rYmA9IL-GZSSs8A5gHhpbU7VDHiLTSiLJH4Y_XrEi9mCvwxh34XERluLn3eCDSLsS-YnYyCMzgxOn4PBlpBc6N5ffZJAhHDUdiO6LAtovrMrh6LvP-8pPwpZSA5sHwJFKA3LbCXHfwsO5_BpuF1Wy4Q2Lu_BfmkMeBGAF6Uyqd9pZnuQaTbfaezrfqntN44958DE9JbVvmnx6-4dqNA5qWuyTLX0XyG_sxq2RHhivfwO8z5piVg9w2t0jVqaBI"/>
+<div class="absolute inset-0 bg-gradient-to-r from-primary/80 to-transparent"></div>
+</div>
+<div class="relative z-10 max-w-7xl mx-auto px-6 w-full">
+<div class="max-w-2xl space-y-base">
+<span class="inline-block px-3 py-1 bg-secondary text-on-secondary text-label-caps uppercase rounded">New Arrival</span>
+<h1 class="font-h1 text-h1 text-white">Gaming Laptop<br/>RTX 40 Series</h1>
+<p class="text-white/80 text-body max-w-lg">Experience unprecedented performance with DLSS 3 and real-time ray tracing. The future of gaming starts here.</p>
+<div class="pt-sm">
+<button class="bg-[#22c55e] text-white font-bold px-lg py-sm rounded-lg hover:brightness-110 active:scale-95 transition-all flex items-center gap-base">
+                            Shop Now <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Categories Section -->
+<section class="py-lg max-w-7xl mx-auto px-6">
+<div class="flex justify-between items-end mb-sm">
+<h2 class="font-h2 text-h2">Categories</h2>
+<a class="text-secondary font-medium hover:underline text-body" href="#">View All</a>
+</div>
+<div class="flex overflow-x-auto gap-gutter pb-4 hide-scrollbar">
+<!-- Laptop Category -->
+<div class="flex-none w-48 group cursor-pointer">
+<div class="aspect-square bg-surface-container rounded-xl flex items-center justify-center border border-outline-variant mb-xs group-hover:border-secondary transition-colors">
+<span class="material-symbols-outlined text-4xl text-outline group-hover:text-secondary" data-icon="laptop">laptop</span>
+</div>
+<p class="text-center font-semibold text-body">Laptops</p>
+</div>
+<!-- PC Gaming Category -->
+<div class="flex-none w-48 group cursor-pointer">
+<div class="aspect-square bg-surface-container rounded-xl flex items-center justify-center border border-outline-variant mb-xs group-hover:border-secondary transition-colors">
+<span class="material-symbols-outlined text-4xl text-outline group-hover:text-secondary" data-icon="desktop_windows">desktop_windows</span>
+</div>
+<p class="text-center font-semibold text-body">PC Gaming</p>
+</div>
+<!-- Components Category -->
+<div class="flex-none w-48 group cursor-pointer">
+<div class="aspect-square bg-surface-container rounded-xl flex items-center justify-center border border-outline-variant mb-xs group-hover:border-secondary transition-colors">
+<span class="material-symbols-outlined text-4xl text-outline group-hover:text-secondary" data-icon="memory">memory</span>
+</div>
+<p class="text-center font-semibold text-body">Components</p>
+</div>
+<!-- Accessories Category -->
+<div class="flex-none w-48 group cursor-pointer">
+<div class="aspect-square bg-surface-container rounded-xl flex items-center justify-center border border-outline-variant mb-xs group-hover:border-secondary transition-colors">
+<span class="material-symbols-outlined text-4xl text-outline group-hover:text-secondary" data-icon="mouse">mouse</span>
+</div>
+<p class="text-center font-semibold text-body">Accessories</p>
+</div>
+<!-- Support -->
+<div class="flex-none w-48 group cursor-pointer">
+<div class="aspect-square bg-surface-container rounded-xl flex items-center justify-center border border-outline-variant mb-xs group-hover:border-secondary transition-colors">
+<span class="material-symbols-outlined text-4xl text-outline group-hover:text-secondary" data-icon="headset_mic">headset_mic</span>
+</div>
+<p class="text-center font-semibold text-body">Support</p>
+</div>
+</div>
+</section>
+<!-- Best Sellers Section -->
+<section class="py-lg bg-surface-container-lowest border-y border-outline-variant">
+<div class="max-w-7xl mx-auto px-6">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-lg gap-sm">
+<div>
+<h2 class="font-h2 text-h2">Best Sellers</h2>
+<p class="text-outline text-body">Top rated laptops chosen by professionals</p>
+</div>
+<div class="flex gap-xs">
+<span class="bg-secondary-fixed text-on-secondary-fixed-variant px-3 py-1 rounded text-label-caps uppercase">Weekly Refresh</span>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Product Card 1 -->
+<div class="bg-white border border-outline-variant rounded-lg overflow-hidden flex flex-col hover:shadow-lg transition-shadow group">
+<div class="relative aspect-video bg-surface-variant p-sm flex items-center justify-center">
+<img class="w-full h-full object-contain mix-blend-multiply" data-alt="silver dell xps 15 laptop on minimalist wooden desk with soft natural window lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdZ-uqKTMxCIqAc0GJ-IG7gQ4SaVOEvPjS5wKW9Zt_NokWGy8ZpMBDWquQ_MX2_C_nklBnYYRwyxpD_oExjNxN-yvrDPEIhVQ50LGYnUQleo3vgn2Gu_2erm9HV_ckIWQp62e6MJmQxCrMjQF7hMsW9WnsCaeX7jrxBZchrfsd7i5HX-cWhi1zXYH9SjG9VXkx1oLrWHtdjOJJCkl-ZPuvNvYolJvF28I2KLVnZ3d4nfAno-9DsCtFWmUrcBdFKi1gyjeXOrC5400"/>
+<div class="absolute top-3 right-3">
+<span class="bg-error-container text-on-error-container text-label-caps px-2 py-1 rounded">Hot Deal</span>
+</div>
+</div>
+<div class="p-sm flex-grow">
+<h3 class="font-h3 text-h3 mb-base">Dell XPS 15</h3>
+<div class="flex flex-wrap gap-xs mb-sm">
+<span class="bg-surface-container text-on-surface-variant text-[10px] font-bold px-2 py-0.5 rounded uppercase tracking-wider">i9-13900H</span>
+<span class="bg-surface-container text-on-surface-variant text-[10px] font-bold px-2 py-0.5 rounded uppercase tracking-wider">32GB RAM</span>
+<span class="bg-surface-container text-on-surface-variant text-[10px] font-bold px-2 py-0.5 rounded uppercase tracking-wider">1TB SSD</span>
+</div>
+<div class="flex justify-between items-end">
+<div>
+<p class="text-outline text-[12px] line-through">$2,499.00</p>
+<p class="font-price-lg text-price-lg text-primary">$2,199.00</p>
+</div>
+<button class="bg-[#22c55e] text-white p-2 rounded-full hover:brightness-110 active:scale-95 transition-all">
+<span class="material-symbols-outlined" data-icon="add_shopping_cart">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="bg-white border border-outline-variant rounded-lg overflow-hidden flex flex-col hover:shadow-lg transition-shadow group">
+<div class="relative aspect-video bg-surface-variant p-sm flex items-center justify-center">
+<img class="w-full h-full object-contain mix-blend-multiply" data-alt="space gray macbook pro showing liquid retina xdr display in a clean high-end studio setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5VUyqkh0AzvUp5K4-O-k5vWn-n4ZFwp56M_89KpUjI0f_xgx-qBfV_IEZveudMmykfMJfqUHCD1tNF6TAYBzCWET32Ek-zg70s4UbgMhYjvldBfNKy5DEIzqiLUYI74S9vDCfMveSSRCjGJPwQ2NBxgnVVcAC2t6uo4CgsDr8GdGtD1KNTcHyNkt34vT6liSbWvlXU023KQ67UUAbKmcMdZ5JZemRfgq2kpMvwX7gQhwm3-b-KH9WYYM02-v2wLRmncHOn-4rr1c"/>
+<div class="absolute top-3 right-3">
+<span class="bg-secondary text-on-secondary text-label-caps px-2 py-1 rounded">New</span>
+</div>
+</div>
+<div class="p-sm flex-grow">
+<h3 class="font-h3 text-h3 mb-base">MacBook Pro 16"</h3>
+<div class="flex flex-wrap gap-xs mb-sm">
+<span class="bg-surface-container text-on-surface-variant text-[10px] font-bold px-2 py-0.5 rounded uppercase tracking-wider">M3 Max</span>
+<span class="bg-surface-container text-on-surface-variant text-[10px] font-bold px-2 py-0.5 rounded uppercase tracking-wider">36GB Unified</span>
+<span class="bg-surface-container text-on-surface-variant text-[10px] font-bold px-2 py-0.5 rounded uppercase tracking-wider">1TB SSD</span>
+</div>
+<div class="flex justify-between items-end">
+<p class="font-price-lg text-price-lg text-primary">$3,499.00</p>
+<button class="bg-[#22c55e] text-white p-2 rounded-full hover:brightness-110 active:scale-95 transition-all">
+<span class="material-symbols-outlined" data-icon="add_shopping_cart">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="bg-white border border-outline-variant rounded-lg overflow-hidden flex flex-col hover:shadow-lg transition-shadow group">
+<div class="relative aspect-video bg-surface-variant p-sm flex items-center justify-center">
+<img class="w-full h-full object-contain mix-blend-multiply" data-alt="high performance razer blade gaming laptop with green snake logo on lid in a dim professional gaming room" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC4pOb5aOFRd-5thAnK5768VualErTyQAj7ptSE0De6P60WhAD617a_ZLab_3TixLC0eGbk8U_dQ2iB-MjlBM3GyNnP7BTBazJgwr6OrBP0oLfl_er11qKAt6PHVUXihGjqfj-J4OGzTqSn7S_DK0Z2hQT8Uf1_e7lAPnq5JQizwYDk6_SuMXjcVpt9W7Lb2K4m28mKqJq_lsVkKMflCm75rLvHwqe6jh9c1AVxY9tFYdUbB2gDjR7u22lEaUwhpCNabnGYl5HRR9A"/>
+</div>
+<div class="p-sm flex-grow">
+<h3 class="font-h3 text-h3 mb-base">Razer Blade 14</h3>
+<div class="flex flex-wrap gap-xs mb-sm">
+<span class="bg-surface-container text-on-surface-variant text-[10px] font-bold px-2 py-0.5 rounded uppercase tracking-wider">Ryzen 9</span>
+<span class="bg-surface-container text-on-surface-variant text-[10px] font-bold px-2 py-0.5 rounded uppercase tracking-wider">RTX 4070</span>
+<span class="bg-surface-container text-on-surface-variant text-[10px] font-bold px-2 py-0.5 rounded uppercase tracking-wider">16GB RAM</span>
+</div>
+<div class="flex justify-between items-end">
+<p class="font-price-lg text-price-lg text-primary">$2,399.00</p>
+<button class="bg-[#22c55e] text-white p-2 rounded-full hover:brightness-110 active:scale-95 transition-all">
+<span class="material-symbols-outlined" data-icon="add_shopping_cart">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Newsletter / Specs Section (Bento Style) -->
+<section class="py-xl max-w-7xl mx-auto px-6">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<div class="md:col-span-2 bg-primary-container p-lg rounded-xl text-white relative overflow-hidden flex flex-col justify-center min-h-[300px]">
+<div class="relative z-10">
+<h2 class="font-h1 text-h1 mb-base">Build Your Custom PC</h2>
+<p class="text-on-primary-container text-body mb-sm">Our expert technicians will assemble and stress-test your dream rig.</p>
+<button class="bg-secondary text-white font-bold px-sm py-xs rounded hover:brightness-110 transition-all">Start Configuration</button>
+</div>
+<div class="absolute right-0 bottom-0 w-1/2 h-full opacity-20 pointer-events-none">
+<span class="material-symbols-outlined text-[200px]" data-icon="settings">settings</span>
+</div>
+</div>
+<div class="bg-white border border-outline-variant p-lg rounded-xl flex flex-col justify-center text-center">
+<span class="material-symbols-outlined text-4xl text-secondary mb-base" data-icon="verified">verified</span>
+<h3 class="font-h3 text-h3 mb-xs">Extended Warranty</h3>
+<p class="text-outline text-body mb-sm">Up to 5 years of accidental damage protection for all laptops.</p>
+<a class="text-secondary font-bold hover:underline" href="#">Learn More</a>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-2 py-3 bg-white border-t border-slate-200 shadow-lg md:hidden">
+<a class="flex flex-col items-center justify-center bg-slate-100 text-slate-900 rounded-md px-4 py-1" href="#">
+<span class="material-symbols-outlined" data-icon="storefront" style="font-variation-settings: 'FILL' 1;">storefront</span>
+<span class="font-['Inter'] text-[11px] font-medium uppercase tracking-wider">Store</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 px-4 py-1 hover:text-slate-900" href="#">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+<span class="font-['Inter'] text-[11px] font-medium uppercase tracking-wider">Search</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 px-4 py-1 hover:text-slate-900" href="#">
+<span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
+<span class="font-['Inter'] text-[11px] font-medium uppercase tracking-wider">Cart</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 px-4 py-1 hover:text-slate-900" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-['Inter'] text-[11px] font-medium uppercase tracking-wider">Profile</span>
+</a>
+</nav>
+</body></html>

@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>TechGear | ASUS ROG Strix SCAR 18</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;family=JetBrains+Mono:wght@500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-secondary-fixed-variant": "#004395",
+                    "surface-bright": "#fcf8fa",
+                    "on-primary": "#ffffff",
+                    "inverse-primary": "#bec6e0",
+                    "on-error": "#ffffff",
+                    "tertiary-fixed": "#fcdeb5",
+                    "on-surface-variant": "#45464d",
+                    "tertiary-fixed-dim": "#dec29a",
+                    "secondary-fixed": "#d8e2ff",
+                    "inverse-surface": "#303032",
+                    "surface": "#fcf8fa",
+                    "on-tertiary": "#ffffff",
+                    "secondary-container": "#2170e4",
+                    "on-tertiary-fixed-variant": "#574425",
+                    "on-secondary": "#ffffff",
+                    "primary": "#000000",
+                    "outline-variant": "#c6c6cd",
+                    "surface-container-lowest": "#ffffff",
+                    "tertiary": "#000000",
+                    "on-primary-fixed-variant": "#3f465c",
+                    "tertiary-container": "#271901",
+                    "on-primary-container": "#7c839b",
+                    "on-secondary-container": "#fefcff",
+                    "secondary-fixed-dim": "#adc6ff",
+                    "surface-container": "#f0edef",
+                    "inverse-on-surface": "#f3f0f2",
+                    "on-tertiary-container": "#98805d",
+                    "on-primary-fixed": "#131b2e",
+                    "surface-container-high": "#eae7e9",
+                    "primary-container": "#131b2e",
+                    "on-error-container": "#93000a",
+                    "primary-fixed-dim": "#bec6e0",
+                    "surface-dim": "#dcd9db",
+                    "on-tertiary-fixed": "#271901",
+                    "secondary": "#0058be",
+                    "surface-container-highest": "#e4e2e4",
+                    "error-container": "#ffdad6",
+                    "on-surface": "#1b1b1d",
+                    "outline": "#76777d",
+                    "surface-container-low": "#f6f3f5",
+                    "surface-tint": "#565e74",
+                    "surface-variant": "#e4e2e4",
+                    "primary-fixed": "#dae2fd",
+                    "on-background": "#1b1b1d",
+                    "error": "#ba1a1a",
+                    "on-secondary-fixed": "#001a42",
+                    "background": "#fcf8fa"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "container-max": "1280px",
+                    "md": "24px",
+                    "base": "4px",
+                    "sm": "16px",
+                    "xl": "80px",
+                    "lg": "48px",
+                    "gutter": "24px",
+                    "xs": "8px"
+            },
+            "fontFamily": {
+                    "h1": ["Inter"],
+                    "h3": ["Inter"],
+                    "price-sm": ["JetBrains Mono"],
+                    "h2": ["Inter"],
+                    "price-lg": ["JetBrains Mono"],
+                    "body": ["Inter"],
+                    "label-caps": ["Inter"]
+            },
+            "fontSize": {
+                    "h1": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "h3": ["20px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                    "price-sm": ["16px", {"lineHeight": "1", "fontWeight": "500"}],
+                    "h2": ["24px", {"lineHeight": "1.3", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "price-lg": ["24px", {"lineHeight": "1", "fontWeight": "600"}],
+                    "body": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            height: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #f1f5f9;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 2px;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface font-body text-on-surface antialiased">
+<!-- TopAppBar -->
+<nav class="sticky top-0 z-50 bg-white border-b border-slate-200">
+<div class="flex justify-between items-center w-full px-6 py-4 max-w-7xl mx-auto font-['Inter'] antialiased tracking-tight">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-slate-900" data-icon="laptop_chromebook">laptop_chromebook</span>
+<span class="text-xl font-black tracking-tighter text-slate-900 uppercase">TechGear</span>
+</div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="text-slate-500 hover:text-slate-900 transition-colors text-sm font-semibold uppercase tracking-wider" href="#">Store</a>
+<a class="text-slate-500 hover:text-slate-900 transition-colors text-sm font-semibold uppercase tracking-wider" href="#">Products</a>
+<a class="text-slate-500 hover:text-slate-900 transition-colors text-sm font-semibold uppercase tracking-wider" href="#">Support</a>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-slate-900 p-2 hover:bg-slate-50 rounded-full transition-colors cursor-pointer" data-icon="shopping_cart">shopping_cart</span>
+<span class="material-symbols-outlined text-slate-900 p-2 hover:bg-slate-50 rounded-full transition-colors cursor-pointer md:hidden" data-icon="menu">menu</span>
+</div>
+</div>
+</nav>
+<main class="max-w-7xl mx-auto px-6 py-8 mb-24">
+<!-- Breadcrumbs -->
+<nav class="flex items-center gap-2 text-xs font-label-caps text-on-surface-variant mb-6 uppercase">
+<a class="hover:text-primary" href="#">Store</a>
+<span class="material-symbols-outlined text-[14px]" data-icon="chevron_right">chevron_right</span>
+<a class="hover:text-primary" href="#">Laptops</a>
+<span class="material-symbols-outlined text-[14px]" data-icon="chevron_right">chevron_right</span>
+<span class="text-primary font-bold">ROG Strix SCAR 18</span>
+</nav>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+<!-- Left Column: Image Slider -->
+<div class="lg:col-span-7 space-y-6">
+<div class="aspect-video bg-white border border-outline-variant rounded-lg overflow-hidden flex items-center justify-center relative group">
+<img alt="ASUS ROG Strix SCAR 18" class="object-contain w-full h-full p-8" data-alt="high-end gaming laptop with RGB lighting keyboard and large screen displayed against a clean white professional studio background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSOkeZ0AxMQ9HitgMjIP5ysIaWuSTnxvEtZbCvzIEVRp4GklyOXy7WhqfS_s0DXN9SI2TPNNta9gm_wxjwigK3GBite4dfporjz2mDabvfXmD4gFfUFODy6fSIXi19WaO9BH-xXvpGgztFxgMPkAAnA_w3SHUiQPSCoUqeHlqtu1faZkjEHlinBEJ2VRfTocM-1rMzWZ7wiqNPSangg1Jxwe7xZTKrK6Ok1-9JFxOFC0m43qjl04Wr1THvzlRfahuy7KNF7tcyB6E"/>
+<button class="absolute left-4 bg-white/80 p-2 rounded-full shadow-sm hover:bg-white transition-colors">
+<span class="material-symbols-outlined" data-icon="arrow_back_ios_new">arrow_back_ios_new</span>
+</button>
+<button class="absolute right-4 bg-white/80 p-2 rounded-full shadow-sm hover:bg-white transition-colors">
+<span class="material-symbols-outlined" data-icon="arrow_forward_ios">arrow_forward_ios</span>
+</button>
+</div>
+<div class="flex gap-4 overflow-x-auto pb-2 custom-scrollbar">
+<div class="min-w-[100px] aspect-square bg-white border-2 border-secondary rounded-lg p-2 cursor-pointer">
+<img alt="View 1" class="w-full h-full object-contain" data-alt="front view of professional gaming laptop showing vibrant 18 inch display screen and colorful keyboard illumination" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCczBtCBySgWLFJZfOJgmigGIWAXG8LGG3Xven72eMX7e0I8zpVzL5jT803YHBdk5amWdFEEp0Vs19wt3U-ACMR8FpefEPCM6qU7YptXXrp23yH1rVeyQEqd1dqbKgA9e0w-qZp6ZWkKrF2t_sLay77O-BKzrOsbxZilcSNlcO-4Ktsxx0FauF0KccU7r_QtevNqCtB97m37z9Ou2Yd2zUOZew3VZK7k0ezwUjlHhe3gR90_pzK5E_iGfHsP-x16dDpVEUXu6HJArQ"/>
+</div>
+<div class="min-w-[100px] aspect-square bg-white border border-outline-variant rounded-lg p-2 cursor-pointer hover:border-outline transition-colors">
+<img alt="View 2" class="w-full h-full object-contain" data-alt="side profile view of slim gaming laptop highlighting thin chassis and metallic thermal exhaust vents" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvX6gWdRwXti68TVCyu1oRE164l4bj2Px7_GgYEYj-CxoBse2CQVVK6TMaQ2PfQ4zWdwgU4CE0b2jLg6KypNO4L19Mdk3nET14iR2xOM_-qQ4T8m7necDnnDnabK0UzwvHPfDBkUKiKWFVDigF7GKkUajFAjhtp4wv-n3lBDCjApM67vCO9rx0CFcXTf7HHbeiiVl_kLGPxg4wfv8KbOYH_MneX3IPba8a2qYOdJe4lL8a191nRIEERwi3FpiyKcsvZF6UIzk4OXE"/>
+</div>
+<div class="min-w-[100px] aspect-square bg-white border border-outline-variant rounded-lg p-2 cursor-pointer hover:border-outline transition-colors">
+<img alt="View 3" class="w-full h-full object-contain" data-alt="close up of premium laptop hinges and textured finish on the outer lid with glowing logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbHjHMvz0E49PhFKsgotdIc2ZrecNYLYJJjmz8zkodRDM3bQzmD3MAAAhOnUDgiMjpDU-l8flsm2AotkCRXmvwVqxuAM-0IUx-F_mbQ49n9yl4QW4x8vb33uRP4bBIg6htLCs_WxpdW7qx4sbl4n8qHd2Ie90AiWvsbBDvCTpcNdSs-3syorO6QRA_nrDv6Q5B6gKXXg4sKWQ_U1raESoh7RVw9U8jlF89xN6dp0s0aX8gg-kjtil1veJiLwbnF2P5-Qm4jEi2GXk"/>
+</div>
+<div class="min-w-[100px] aspect-square bg-white border border-outline-variant rounded-lg p-2 cursor-pointer hover:border-outline transition-colors">
+<img alt="View 4" class="w-full h-full object-contain" data-alt="overhead view of illuminated mechanical keyboard and large precision glass touchpad on gaming laptop" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJswc1nrq6FzM1vvmzE8Sn37p5NFzXe7DnDQgd6UVrOGtgZNC_680fFcRD-psnoMzAc1YCm3zyiTBwjEPt9KNK_rjKQi6BJrffYDkkB-nUuGWm3ZdWBmEMkw_8KLrdgrBk_Y16x6iOy9Q0BXEPAODMXZVsX8YFNwFw2yd5IgPBtR4Cdo4SqDgCcxn3lE34rtCdQQwInEbJyhWfTSkZRBm4MbCk02r8GhwlNjrHVC7hreQOvSengAFOTIwH6kmOQ8e8FaJhiMsdUhQ"/>
+</div>
+</div>
+<!-- Technical Specs Table -->
+<div class="pt-8">
+<h2 class="font-h2 text-h2 mb-6">Technical Specifications</h2>
+<div class="border border-outline-variant rounded-lg overflow-hidden">
+<table class="w-full text-left border-collapse">
+<tbody>
+<tr class="bg-surface-container-low border-b border-outline-variant">
+<th class="px-6 py-4 font-label-caps text-on-surface-variant uppercase w-1/3">Processor</th>
+<td class="px-6 py-4 font-body text-primary font-medium">Intel® Core™ i9-14900HX 2.4 GHz</td>
+</tr>
+<tr class="bg-white border-b border-outline-variant">
+<th class="px-6 py-4 font-label-caps text-on-surface-variant uppercase">Graphics</th>
+<td class="px-6 py-4 font-body text-primary font-medium">NVIDIA® GeForce RTX™ 4090 16GB GDDR6</td>
+</tr>
+<tr class="bg-surface-container-low border-b border-outline-variant">
+<th class="px-6 py-4 font-label-caps text-on-surface-variant uppercase">Memory</th>
+<td class="px-6 py-4 font-body text-primary font-medium">64GB DDR5-5600 SO-DIMM</td>
+</tr>
+<tr class="bg-white border-b border-outline-variant">
+<th class="px-6 py-4 font-label-caps text-on-surface-variant uppercase">Storage</th>
+<td class="px-6 py-4 font-body text-primary font-medium">2TB + 2TB PCIe® 4.0 NVMe™ M.2 Performance SSD (RAID 0)</td>
+</tr>
+<tr class="bg-surface-container-low border-b border-outline-variant">
+<th class="px-6 py-4 font-label-caps text-on-surface-variant uppercase">Display</th>
+<td class="px-6 py-4 font-body text-primary font-medium">18-inch QHD+ 16:10 (2560 x 1600) 240Hz Nebula HDR</td>
+</tr>
+<tr class="bg-white">
+<th class="px-6 py-4 font-label-caps text-on-surface-variant uppercase">OS</th>
+<td class="px-6 py-4 font-body text-primary font-medium">Windows 11 Pro</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<!-- Right Column: Product Info & Actions -->
+<div class="lg:col-span-5 space-y-8">
+<div class="space-y-4">
+<div class="flex items-center gap-2">
+<span class="bg-primary text-white text-[10px] font-bold px-2 py-1 rounded uppercase tracking-widest">In Stock</span>
+<span class="bg-secondary-container text-on-secondary-container text-[10px] font-bold px-2 py-1 rounded uppercase tracking-widest">Free Shipping</span>
+</div>
+<h1 class="font-h1 text-h1 text-primary">ASUS ROG Strix SCAR 18 (2024)</h1>
+<div class="flex items-center gap-4">
+<div class="flex text-[#F59E0B]">
+<span class="material-symbols-outlined text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="text-xs font-medium text-on-surface-variant uppercase tracking-tighter">142 Reviews</span>
+</div>
+<div class="pt-4 flex items-baseline gap-2">
+<span class="font-price-lg text-price-lg text-primary">$3,899.99</span>
+<span class="text-on-surface-variant line-through text-sm">$4,299.99</span>
+</div>
+</div>
+<!-- CTAs -->
+<div class="space-y-4">
+<button class="w-full py-4 bg-[#22C55E] text-white font-bold rounded-lg text-lg hover:brightness-110 active:scale-[0.98] transition-all flex items-center justify-center gap-2">
+<span class="material-symbols-outlined" data-icon="bolt">bolt</span>
+                        Buy Now
+                    </button>
+<button class="w-full py-4 border-2 border-secondary text-secondary font-bold rounded-lg text-lg hover:bg-secondary/5 active:scale-[0.98] transition-all flex items-center justify-center gap-2">
+<span class="material-symbols-outlined" data-icon="settings_suggest">settings_suggest</span>
+                        Customize Specs
+                    </button>
+<p class="text-center text-xs text-on-surface-variant font-medium uppercase tracking-widest">Or <a class="text-secondary underline" href="#">Build Your Own PC</a> from scratch</p>
+</div>
+<!-- Warranty & Policies -->
+<div class="bg-surface-container-low p-6 rounded-lg border border-outline-variant space-y-4">
+<h3 class="font-h3 text-h3 flex items-center gap-2">
+<span class="material-symbols-outlined" data-icon="verified_user">verified_user</span>
+                        Protection &amp; Support
+                    </h3>
+<div class="grid grid-cols-1 gap-4">
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary" data-icon="shield">shield</span>
+<div>
+<p class="text-sm font-bold text-primary uppercase tracking-tight">2-Year Standard Warranty</p>
+<p class="text-xs text-on-surface-variant">Covers manufacturing defects and hardware failure.</p>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary" data-icon="local_shipping">local_shipping</span>
+<div>
+<p class="text-sm font-bold text-primary uppercase tracking-tight">30-Day Return Policy</p>
+<p class="text-xs text-on-surface-variant">Full refund if item is in original condition.</p>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary" data-icon="support_agent">support_agent</span>
+<div>
+<p class="text-sm font-bold text-primary uppercase tracking-tight">24/7 Tech Support</p>
+<p class="text-xs text-on-surface-variant">Dedicated priority line for ROG owners.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Technical Badges -->
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 bg-surface-container-highest rounded text-[10px] font-black text-primary border border-outline-variant uppercase">RTX 4090</span>
+<span class="px-3 py-1 bg-surface-container-highest rounded text-[10px] font-black text-primary border border-outline-variant uppercase">DDR5 5600MHz</span>
+<span class="px-3 py-1 bg-surface-container-highest rounded text-[10px] font-black text-primary border border-outline-variant uppercase">NEBULA HDR</span>
+<span class="px-3 py-1 bg-surface-container-highest rounded text-[10px] font-black text-primary border border-outline-variant uppercase">WIFI 7 READY</span>
+</div>
+</div>
+</div>
+<!-- Additional Information Section (Editorial) -->
+<div class="mt-20 grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="bg-white border border-outline-variant p-8 rounded-lg space-y-4">
+<span class="material-symbols-outlined text-4xl text-primary" data-icon="ac_unit">ac_unit</span>
+<h4 class="font-h3 text-h3">Intelligent Cooling</h4>
+<p class="text-sm text-on-surface-variant">Tri-Fan Technology combined with Conductonaut Extreme liquid metal on both CPU and GPU for maximum sustained performance.</p>
+</div>
+<div class="bg-white border border-outline-variant p-8 rounded-lg space-y-4">
+<span class="material-symbols-outlined text-4xl text-primary" data-icon="speed">speed</span>
+<h4 class="font-h3 text-h3">Extreme Framerates</h4>
+<p class="text-sm text-on-surface-variant">Powered by the latest 14th Gen Intel Core i9 processor and NVIDIA RTX 40 series, dominate any battlefield with ease.</p>
+</div>
+<div class="bg-white border border-outline-variant p-8 rounded-lg space-y-4">
+<span class="material-symbols-outlined text-4xl text-primary" data-icon="palette">palette</span>
+<h4 class="font-h3 text-h3">Nebula HDR Display</h4>
+<p class="text-sm text-on-surface-variant">Mini LED technology with 1100 nits peak brightness and 100% DCI-P3 coverage for stunning visual fidelity.</p>
+</div>
+</div>
+</main>
+<!-- Fixed Bottom Bar -->
+<div class="fixed bottom-0 left-0 w-full z-50 bg-white/95 backdrop-blur-md border-t border-slate-200 py-3 px-6 shadow-2xl">
+<div class="max-w-7xl mx-auto flex items-center justify-between gap-6">
+<div class="hidden md:flex flex-col">
+<span class="text-[10px] font-bold text-on-surface-variant uppercase tracking-widest">Total Price</span>
+<span class="font-price-sm text-price-sm text-primary">$3,899.99</span>
+</div>
+<div class="flex-1 flex gap-4 max-w-lg ml-auto">
+<button class="flex-1 h-12 border-2 border-primary text-primary font-bold uppercase text-xs tracking-widest rounded-lg hover:bg-primary hover:text-white transition-all active:scale-[0.98]">
+                    Add to Cart
+                </button>
+<button class="flex-1 h-12 bg-[#22C55E] text-white font-bold uppercase text-xs tracking-widest rounded-lg hover:brightness-110 shadow-lg shadow-green-500/20 transition-all active:scale-[0.98]">
+                    Checkout Now
+                </button>
+</div>
+</div>
+</div>
+<!-- Mobile Bottom NavBar (Suppressed for focused product page, using Fixed Bar above instead) -->
+</body></html>

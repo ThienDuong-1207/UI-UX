@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;family=JetBrains+Mono:wght@500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #fcf8fa;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-secondary-fixed-variant": "#004395",
+                      "surface-bright": "#fcf8fa",
+                      "on-primary": "#ffffff",
+                      "inverse-primary": "#bec6e0",
+                      "on-error": "#ffffff",
+                      "tertiary-fixed": "#fcdeb5",
+                      "on-surface-variant": "#45464d",
+                      "tertiary-fixed-dim": "#dec29a",
+                      "secondary-fixed": "#d8e2ff",
+                      "inverse-surface": "#303032",
+                      "surface": "#fcf8fa",
+                      "on-tertiary": "#ffffff",
+                      "secondary-container": "#2170e4",
+                      "on-tertiary-fixed-variant": "#574425",
+                      "on-secondary": "#ffffff",
+                      "primary": "#000000",
+                      "outline-variant": "#c6c6cd",
+                      "surface-container-lowest": "#ffffff",
+                      "tertiary": "#000000",
+                      "on-primary-fixed-variant": "#3f465c",
+                      "tertiary-container": "#271901",
+                      "on-primary-container": "#7c839b",
+                      "on-secondary-container": "#fefcff",
+                      "secondary-fixed-dim": "#adc6ff",
+                      "surface-container": "#f0edef",
+                      "inverse-on-surface": "#f3f0f2",
+                      "on-tertiary-container": "#98805d",
+                      "on-primary-fixed": "#131b2e",
+                      "surface-container-high": "#eae7e9",
+                      "primary-container": "#131b2e",
+                      "on-error-container": "#93000a",
+                      "primary-fixed-dim": "#bec6e0",
+                      "surface-dim": "#dcd9db",
+                      "on-tertiary-fixed": "#271901",
+                      "secondary": "#0058be",
+                      "surface-container-highest": "#e4e2e4",
+                      "error-container": "#ffdad6",
+                      "on-surface": "#1b1b1d",
+                      "outline": "#76777d",
+                      "surface-container-low": "#f6f3f5",
+                      "surface-tint": "#565e74",
+                      "surface-variant": "#e4e2e4",
+                      "primary-fixed": "#dae2fd",
+                      "on-background": "#1b1b1d",
+                      "error": "#ba1a1a",
+                      "on-secondary-fixed": "#001a42",
+                      "background": "#fcf8fa"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "container-max": "1280px",
+                      "md": "24px",
+                      "base": "4px",
+                      "sm": "16px",
+                      "xl": "80px",
+                      "lg": "48px",
+                      "gutter": "24px",
+                      "xs": "8px"
+              },
+              "fontFamily": {
+                      "h1": ["Inter"],
+                      "h3": ["Inter"],
+                      "price-sm": ["JetBrains Mono"],
+                      "h2": ["Inter"],
+                      "price-lg": ["JetBrains Mono"],
+                      "body": ["Inter"],
+                      "label-caps": ["Inter"]
+              },
+              "fontSize": {
+                      "h1": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "h3": ["20px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                      "price-sm": ["16px", {"lineHeight": "1", "fontWeight": "500"}],
+                      "h2": ["24px", {"lineHeight": "1.3", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                      "price-lg": ["24px", {"lineHeight": "1", "fontWeight": "600"}],
+                      "body": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "700"}]
+              }
+            },
+          },
+        }
+      </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface antialiased">
+<!-- TopAppBar -->
+<header class="sticky top-0 z-50 bg-white border-b border-outline-variant">
+<div class="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
+<div class="flex items-center gap-4">
+<button class="p-2 hover:bg-surface-container rounded-lg transition-colors active:scale-95 duration-150">
+<span class="material-symbols-outlined text-on-surface">arrow_back</span>
+</button>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-slate-900" data-icon="laptop_chromebook">laptop_chromebook</span>
+<h1 class="text-xl font-black tracking-tighter text-slate-900 uppercase">TechGear</h1>
+</div>
+</div>
+<div class="flex-1 max-w-xl mx-8 hidden md:block">
+<div class="relative group">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline">search</span>
+<input class="w-full bg-surface-container border-none rounded-lg py-2 pl-10 pr-4 focus:ring-2 focus:ring-secondary transition-all font-body text-sm" placeholder="Search workstations, laptops, or components..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<button class="p-2 hover:bg-surface-container rounded-lg transition-colors active:scale-95 duration-150">
+<span class="material-symbols-outlined text-slate-900" data-icon="shopping_cart">shopping_cart</span>
+</button>
+<button class="md:hidden p-2 hover:bg-surface-container rounded-lg transition-colors">
+<span class="material-symbols-outlined text-slate-900">search</span>
+</button>
+</div>
+</div>
+</header>
+<main class="max-w-7xl mx-auto px-6 py-8">
+<!-- Breadcrumbs -->
+<nav class="flex items-center gap-2 text-label-caps text-outline mb-6">
+<span>STORE</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span>LAPTOPS</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="text-secondary font-bold">HIGH-END WORKSTATIONS</span>
+</nav>
+<div class="flex flex-col lg:flex-row gap-8">
+<!-- Filter Section (Sidebar Desktop) -->
+<aside class="w-full lg:w-72 flex-shrink-0">
+<div class="sticky top-24 space-y-8">
+<div>
+<h3 class="font-h3 text-h3 mb-4">Filters</h3>
+<div class="h-1 w-8 bg-primary mb-6"></div>
+</div>
+<!-- CPU Filter -->
+<div class="space-y-3">
+<label class="font-label-caps text-label-caps text-outline uppercase">Processor (CPU)</label>
+<div class="flex flex-wrap gap-2">
+<button class="px-4 py-2 border border-secondary bg-secondary-fixed text-on-secondary-fixed-variant rounded-lg font-body text-sm font-semibold transition-all">Intel Core i9</button>
+<button class="px-4 py-2 border border-outline-variant hover:border-secondary rounded-lg font-body text-sm transition-all">Intel Core i7</button>
+<button class="px-4 py-2 border border-outline-variant hover:border-secondary rounded-lg font-body text-sm transition-all">Intel Core i5</button>
+</div>
+</div>
+<!-- GPU Filter -->
+<div class="space-y-3">
+<label class="font-label-caps text-label-caps text-outline uppercase">Graphics (GPU)</label>
+<div class="flex flex-wrap gap-2">
+<button class="px-4 py-2 border border-outline-variant hover:border-secondary rounded-lg font-body text-sm transition-all">RTX 4090</button>
+<button class="px-4 py-2 border border-secondary bg-secondary-fixed text-on-secondary-fixed-variant rounded-lg font-body text-sm font-semibold transition-all">RTX 4080</button>
+<button class="px-4 py-2 border border-outline-variant hover:border-secondary rounded-lg font-body text-sm transition-all">RTX 4070</button>
+<button class="px-4 py-2 border border-outline-variant hover:border-secondary rounded-lg font-body text-sm transition-all">RTX 3060</button>
+</div>
+</div>
+<!-- Brand Filter -->
+<div class="space-y-3">
+<label class="font-label-caps text-label-caps text-outline uppercase">Brand</label>
+<div class="space-y-2">
+<label class="flex items-center gap-3 cursor-pointer group">
+<input checked="" class="rounded border-outline-variant text-primary focus:ring-primary w-5 h-5" type="checkbox"/>
+<span class="font-body text-sm group-hover:text-primary transition-colors">Razer Blade</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="rounded border-outline-variant text-primary focus:ring-primary w-5 h-5" type="checkbox"/>
+<span class="font-body text-sm group-hover:text-primary transition-colors">ROG Zephyrus</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="rounded border-outline-variant text-primary focus:ring-primary w-5 h-5" type="checkbox"/>
+<span class="font-body text-sm group-hover:text-primary transition-colors">Alienware</span>
+</label>
+</div>
+</div>
+<!-- Price Range -->
+<div class="space-y-3">
+<label class="font-label-caps text-label-caps text-outline uppercase">Price Range</label>
+<div class="px-2">
+<input class="w-full accent-primary" max="5000" min="1000" type="range" value="3500"/>
+<div class="flex justify-between mt-2 font-price-sm text-price-sm text-outline">
+<span>$1,000</span>
+<span>$5,000+</span>
+</div>
+</div>
+</div>
+</div>
+</aside>
+<!-- Product Grid -->
+<section class="flex-1">
+<div class="flex justify-between items-center mb-8">
+<span class="font-body text-sm text-outline">Showing 12 Premium Models</span>
+<div class="flex items-center gap-2">
+<span class="font-label-caps text-[10px] text-outline">SORT BY</span>
+<select class="bg-transparent border-none font-h3 text-sm focus:ring-0 cursor-pointer">
+<option>Performance (High to Low)</option>
+<option>Price (Low to High)</option>
+<option>Latest Arrivals</option>
+</select>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<!-- Product Card 1 -->
+<div class="bg-white border border-outline-variant rounded-lg overflow-hidden flex flex-col group hover:shadow-lg transition-all duration-300">
+<div class="relative h-64 overflow-hidden bg-surface-container">
+<img alt="Sleek silver laptop with glowing keyboard on professional workstation" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="minimalist overhead shot of a premium silver gaming laptop with thin bezels and customizable RGB keyboard lighting on a charcoal grey desk" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlCC2qMgKj3U3wdcbI41P7Lw_R4AllYETKdhQsCa_JOi8_Knf9lfs3Q8y6JELJB2zXWMX_j6SaCCn_WGNlJZvJjY-0ouB5Wd7rUk6225fD9lFaMXU1ExwnrdjDx7a1JrREjPEIDEdZEVFk3fdXXj94UfIsSYecKeZ8e53EtexL3XKPgrewIY_xyewH9bUNmUK7xRyLSCmb8lccbCaPmWrIpl3FNgoxJsrkAQ_BwuH988oC45vsBZqhQCLH1j9a1OKxpq5O1l4zfPo"/>
+<div class="absolute top-4 left-4 flex flex-col gap-2">
+<span class="bg-green-100 text-green-800 text-[10px] font-bold px-2 py-1 rounded uppercase tracking-wider">In Stock</span>
+<span class="bg-primary text-white text-[10px] font-bold px-2 py-1 rounded uppercase tracking-wider">0% Installment</span>
+</div>
+<button class="absolute bottom-4 right-4 bg-white/90 backdrop-blur p-2 rounded-full shadow-md opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-on-surface">favorite</span>
+</button>
+</div>
+<div class="p-6 flex-1 flex flex-col">
+<div class="mb-4">
+<div class="flex justify-between items-start mb-1">
+<h4 class="font-h2 text-h3 text-slate-900">Razer Blade 16</h4>
+<span class="bg-surface-container-highest px-2 py-1 rounded text-[10px] font-bold">2024</span>
+</div>
+<p class="text-sm text-outline font-body">Dual UHD+ &amp; FHD+ Mini-LED Display</p>
+</div>
+<div class="grid grid-cols-2 gap-4 mb-6 p-4 bg-surface-container-low rounded">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sm text-outline">memory</span>
+<span class="text-xs font-semibold">i9-14900HX</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sm text-outline">rocket_launch</span>
+<span class="text-xs font-semibold">RTX 4090 16GB</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sm text-outline">speed</span>
+<span class="text-xs font-semibold">64GB DDR5</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sm text-outline">database</span>
+<span class="text-xs font-semibold">4TB NVMe SSD</span>
+</div>
+</div>
+<div class="mt-auto flex justify-between items-end">
+<div>
+<p class="text-[10px] text-outline font-bold uppercase tracking-widest mb-1">As low as $349/mo</p>
+<p class="font-price-lg text-price-lg text-primary">$4,199.99</p>
+</div>
+<button class="bg-[#0058be] hover:bg-on-secondary-fixed-variant text-white px-6 py-3 rounded font-label-caps text-label-caps transition-colors active:scale-95">
+                                    ADD TO CART
+                                </button>
+</div>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="bg-white border border-outline-variant rounded-lg overflow-hidden flex flex-col group hover:shadow-lg transition-all duration-300">
+<div class="relative h-64 overflow-hidden bg-surface-container">
+<img alt="High performance black laptop showing detailed engineering blueprints" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="close-up of a matte black performance laptop with sharp edges and premium finish displaying architectural software on a clean oak desk" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4vqnbejCtkdqpBFsVP79Zl_oWx7KAi4z_-CTTeU4eAICTFwVM35pq4uHFyquJ_hblEWNHmnb3FSSQYwD6VC7OQiDt6qBOUopC1fLhAHPG8FVfdYqFs6AF6dic5T9RsDlL3NUcCnZkRisr-K7QyOY2OZWW3IUGNlIpO3uNVVdyvOzdrUUzkrCk-qifzUDTShzCYZ3o4i4RSjYHeuQW5GNNPMibYQ9FL1BMETPK-BrwZ6ITse2mljuY1HSTRIqjxjzkqQ9fXbYdLe8"/>
+<div class="absolute top-4 left-4 flex flex-col gap-2">
+<span class="bg-secondary-fixed text-on-secondary-fixed-variant text-[10px] font-bold px-2 py-1 rounded uppercase tracking-wider">Top Rated</span>
+<span class="bg-primary text-white text-[10px] font-bold px-2 py-1 rounded uppercase tracking-wider">0% Installment</span>
+</div>
+</div>
+<div class="p-6 flex-1 flex flex-col">
+<div class="mb-4">
+<div class="flex justify-between items-start mb-1">
+<h4 class="font-h2 text-h3 text-slate-900">ROG Zephyrus G16</h4>
+<span class="bg-surface-container-highest px-2 py-1 rounded text-[10px] font-bold">GU605</span>
+</div>
+<p class="text-sm text-outline font-body">OLED 240Hz 2.5K Nebula Display</p>
+</div>
+<div class="grid grid-cols-2 gap-4 mb-6 p-4 bg-surface-container-low rounded">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sm text-outline">memory</span>
+<span class="text-xs font-semibold">Ultra 9 185H</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sm text-outline">rocket_launch</span>
+<span class="text-xs font-semibold">RTX 4080 12GB</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sm text-outline">speed</span>
+<span class="text-xs font-semibold">32GB LPDDR5X</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sm text-outline">database</span>
+<span class="text-xs font-semibold">2TB NVMe SSD</span>
+</div>
+</div>
+<div class="mt-auto flex justify-between items-end">
+<div>
+<p class="text-[10px] text-outline font-bold uppercase tracking-widest mb-1">As low as $241/mo</p>
+<p class="font-price-lg text-price-lg text-primary">$2,899.00</p>
+</div>
+<button class="bg-[#0058be] hover:bg-on-secondary-fixed-variant text-white px-6 py-3 rounded font-label-caps text-label-caps transition-colors active:scale-95">
+                                    ADD TO CART
+                                </button>
+</div>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="bg-white border border-outline-variant rounded-lg overflow-hidden flex flex-col group hover:shadow-lg transition-all duration-300">
+<div class="relative h-64 overflow-hidden bg-surface-container">
+<img alt="Professional laptop with minimalist industrial design in a studio setting" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="professional industrial design workstation laptop with robust hinges and high-precision build quality showcased in a bright architectural studio" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAv4ppzwvT-emcmI0ot7PVG2ocqE8iYkryQwGVX8edmh6JXQ-T8mc--tsSKe4HNUB3NU6TsL0rMFAwb6-Tn-MpK1-S2SSCklNwQWbSaOME3rBcJOIHv7vzVoEDSNzblKUeRWOg5vDHH6R1eLSDYsdOzpbh_ZUJd5mB55Xmux8jgA4x5oF2KMfyBiz9-CCKjtF-LzhIvPG2VZbafITZNkHngs74O8xpnjPzfBn0AOCVQ1RaUOslJyMGf4hkmFaiv6Cyfdjn4DknbOJE"/>
+<div class="absolute top-4 left-4 flex flex-col gap-2">
+<span class="bg-tertiary-fixed text-on-tertiary-fixed-variant text-[10px] font-bold px-2 py-1 rounded uppercase tracking-wider">New Arrival</span>
+</div>
+</div>
+<div class="p-6 flex-1 flex flex-col">
+<div class="mb-4">
+<div class="flex justify-between items-start mb-1">
+<h4 class="font-h2 text-h3 text-slate-900">Alienware m18 R2</h4>
+<span class="bg-surface-container-highest px-2 py-1 rounded text-[10px] font-bold">MAX</span>
+</div>
+<p class="text-sm text-outline font-body">18-inch QHD+ 480Hz Display</p>
+</div>
+<div class="grid grid-cols-2 gap-4 mb-6 p-4 bg-surface-container-low rounded">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sm text-outline">memory</span>
+<span class="text-xs font-semibold">i9-14900HX</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sm text-outline">rocket_launch</span>
+<span class="text-xs font-semibold">RTX 4080 12GB</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sm text-outline">speed</span>
+<span class="text-xs font-semibold">32GB DDR5</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sm text-outline">database</span>
+<span class="text-xs font-semibold">1TB NVMe SSD</span>
+</div>
+</div>
+<div class="mt-auto flex justify-between items-end">
+<div>
+<p class="text-[10px] text-outline font-bold uppercase tracking-widest mb-1">Financing available</p>
+<p class="font-price-lg text-price-lg text-primary">$3,299.99</p>
+</div>
+<button class="bg-[#0058be] hover:bg-on-secondary-fixed-variant text-white px-6 py-3 rounded font-label-caps text-label-caps transition-colors active:scale-95">
+                                    ADD TO CART
+                                </button>
+</div>
+</div>
+</div>
+<!-- Product Card 4 (Small Card Variant / Asymmetric) -->
+<div class="bg-primary text-white border border-primary rounded-lg overflow-hidden flex flex-col group p-8 justify-center items-center text-center">
+<span class="material-symbols-outlined text-[64px] mb-6 text-secondary-fixed">workspace_premium</span>
+<h4 class="font-h2 text-h2 mb-4">Custom Configuration?</h4>
+<p class="font-body text-sm mb-8 opacity-80">Need specific specs for your studio or enterprise? Our technical specialists can build a custom TechGear workstation for you.</p>
+<button class="bg-white text-primary px-8 py-4 rounded font-label-caps text-label-caps hover:bg-secondary-fixed transition-colors w-full">
+                            CONTACT EXPERTS
+                        </button>
+</div>
+</div>
+</section>
+</div>
+</main>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-2 py-3 bg-white border-t border-outline-variant">
+<a class="flex flex-col items-center justify-center bg-slate-100 text-slate-900 rounded-md px-4 py-1" href="#">
+<span class="material-symbols-outlined" data-icon="storefront">storefront</span>
+<span class="font-['Inter'] text-[11px] font-medium uppercase tracking-wider">Store</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 px-4 py-1" href="#">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+<span class="font-['Inter'] text-[11px] font-medium uppercase tracking-wider">Search</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 px-4 py-1" href="#">
+<span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
+<span class="font-['Inter'] text-[11px] font-medium uppercase tracking-wider">Cart</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 px-4 py-1" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-['Inter'] text-[11px] font-medium uppercase tracking-wider">Profile</span>
+</a>
+</nav>
+<!-- Footer Space for Mobile Nav -->
+<div class="h-20 md:hidden"></div>
+</body></html>

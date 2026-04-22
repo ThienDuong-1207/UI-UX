@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Sign In - QuickBite</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Be+Vietnam+Pro:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "background": "#fff8f5",
+                        "on-background": "#251912",
+                        "on-primary": "#ffffff",
+                        "surface-container-low": "#fff1ea",
+                        "primary-fixed": "#ffdbc8",
+                        "on-error": "#ffffff",
+                        "surface-dim": "#edd5ca",
+                        "surface-container": "#ffeadf",
+                        "inverse-on-surface": "#ffede5",
+                        "surface-tint": "#994700",
+                        "secondary-container": "#91f78e",
+                        "error": "#ba1a1a",
+                        "error-container": "#ffdad6",
+                        "tertiary": "#006399",
+                        "primary-fixed-dim": "#ffb68b",
+                        "on-surface": "#251912",
+                        "on-surface-variant": "#584235",
+                        "on-primary-fixed-variant": "#753400",
+                        "surface-container-high": "#fbe3d7",
+                        "inverse-primary": "#ffb68b",
+                        "on-secondary-fixed": "#002204",
+                        "surface-bright": "#fff8f5",
+                        "surface-variant": "#f6ded2",
+                        "secondary-fixed-dim": "#78dc77",
+                        "inverse-surface": "#3b2d26",
+                        "on-secondary-container": "#00731e",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-container": "#003a5c",
+                        "on-primary-container": "#5c2800",
+                        "primary-container": "#ff7a00",
+                        "outline-variant": "#e0c0af",
+                        "on-primary-fixed": "#321200",
+                        "surface-container-highest": "#f6ded2",
+                        "outline": "#8c7263",
+                        "on-secondary": "#ffffff",
+                        "tertiary-fixed-dim": "#95ccff",
+                        "on-tertiary-fixed-variant": "#004a75",
+                        "secondary": "#006e1c",
+                        "tertiary-container": "#00a8ff",
+                        "on-error-container": "#93000a",
+                        "on-secondary-fixed-variant": "#005313",
+                        "secondary-fixed": "#94f990",
+                        "on-tertiary": "#ffffff",
+                        "tertiary-fixed": "#cde5ff",
+                        "on-tertiary-fixed": "#001d32",
+                        "surface": "#fff8f5"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "md": "16px",
+                        "sm": "8px",
+                        "gutter": "16px",
+                        "margin-mobile": "20px",
+                        "xs": "4px",
+                        "xxl": "48px",
+                        "xl": "32px",
+                        "lg": "24px"
+                    },
+                    "fontFamily": {
+                        "h1": ["Plus Jakarta Sans"],
+                        "body-md": ["Be Vietnam Pro"],
+                        "h3": ["Plus Jakarta Sans"],
+                        "caption": ["Plus Jakarta Sans"],
+                        "h2": ["Plus Jakarta Sans"],
+                        "button": ["Plus Jakarta Sans"],
+                        "body-sm": ["Be Vietnam Pro"],
+                        "body-lg": ["Be Vietnam Pro"]
+                    },
+                    "fontSize": {
+                        "h1": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "h3": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                        "caption": ["12px", {"lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "500"}],
+                        "h2": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "button": ["16px", {"lineHeight": "24px", "fontWeight": "600"}],
+                        "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .app-container {
+            max-width: 480px;
+            margin: 0 auto;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            background-color: #fff8f5;
+        }
+        .glass-effect {
+            backdrop-filter: blur(8px);
+            background: rgba(255, 255, 255, 0.8);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-zinc-100 font-body-md text-on-background">
+<main class="app-container relative overflow-hidden">
+<!-- Hero Section: Appetizing Image -->
+<section class="h-[397px] w-full relative">
+<div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-surface-container-lowest z-10"></div>
+<img alt="QuickBite Hero" class="w-full h-full object-cover" data-alt="Close-up professional food photography of a gourmet cheeseburger with melting cheddar, fresh lettuce, and tomatoes under soft warm studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAsNGbHUdOT5lMP4rY9oanpAybpMKpuA3d9Ic_pNp1l8PAYLo9rP-zPZsnSAf81DiCZxxqaN4JlyVlLENvcoyY15AUr9qgGNDQ5YQsOTASacwHLbsdWxj_JXbjFoHH973tKmYOdxjWSfLwHwhQEcmLjQnhrSpzHUDHB3JPYlscX5ogD22muD3OFstVCfaQ85_A94SKFaEBLwH3gCRqIhTd7qMwm9yPXNYNtW-u2qI8QE2SbQJl-uKrem4v-GTLTybK3sAMbsgKmxA"/>
+<!-- Branding Overlay -->
+<div class="absolute top-10 left-5 z-20">
+<div class="flex items-center gap-2">
+<span class="text-orange-500 font-black text-3xl tracking-tighter font-h1">QuickBite</span>
+</div>
+</div>
+</section>
+<!-- Auth Container -->
+<section class="flex-grow bg-surface-container-lowest -mt-12 relative z-20 rounded-t-[40px] px-margin-mobile pt-xl pb-xxl shadow-[0_-8px_32px_rgba(0,0,0,0.06)]">
+<div class="mb-xl">
+<h1 class="font-h1 text-h1 text-on-surface mb-xs">Welcome Back!</h1>
+<p class="font-body-md text-body-md text-on-surface-variant">We've missed you. Ready for another bite?</p>
+</div>
+<!-- Sign In Form -->
+<form class="space-y-lg">
+<div class="space-y-sm">
+<label class="font-caption text-caption text-outline ml-1">Email Address</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline">mail</span>
+<input class="w-full pl-12 pr-4 py-4 bg-[#FCFCFC] border border-[#EEEEEE] rounded-[12px] focus:outline-none focus:border-primary-container transition-all font-body-md" placeholder="your@email.com" type="email"/>
+</div>
+</div>
+<div class="space-y-sm">
+<label class="font-caption text-caption text-outline ml-1">Password</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline">lock</span>
+<input class="w-full pl-12 pr-12 py-4 bg-[#FCFCFC] border border-[#EEEEEE] rounded-[12px] focus:outline-none focus:border-primary-container transition-all font-body-md" placeholder="Enter your password" type="password"/>
+<button class="absolute right-4 top-1/2 -translate-y-1/2 text-outline" type="button">
+<span class="material-symbols-outlined">visibility</span>
+</button>
+</div>
+<div class="flex justify-end">
+<a class="font-caption text-caption text-primary hover:underline" href="#">Forgot Password?</a>
+</div>
+</div>
+<button class="w-full bg-primary-container text-on-primary font-button text-button py-4 rounded-[16px] shadow-[0_4px_12px_rgba(255,122,0,0.25)] active:scale-[0.98] transition-transform duration-150" type="submit">
+                    Sign In
+                </button>
+</form>
+<!-- Divider -->
+<div class="relative my-xl flex items-center">
+<div class="flex-grow border-t border-outline-variant"></div>
+<span class="px-4 font-caption text-caption text-outline bg-surface-container-lowest">Or continue with</span>
+<div class="flex-grow border-t border-outline-variant"></div>
+</div>
+<!-- Social Logins -->
+<div class="grid grid-cols-2 gap-md">
+<button class="flex items-center justify-center gap-sm py-3 px-4 border border-[#EEEEEE] rounded-[16px] bg-white hover:bg-zinc-50 active:scale-95 transition-all">
+<img alt="Google" class="w-5 h-5" data-alt="Google colorful logo icon on a clean white background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBb5TVck0x5TVQsgjkRepODFFRjHK0a-hohkztuko3e7cGMhhQqTzRMfG9jGCTOLaNW59oMdCpWOp9NzJ3-r3QUteZSl8ZXsrE0dvPEZLg8Ty2_9Owh-u9CemNKDPupeKkycPCBp3T9guXdcBM0iNAhhmuzdvGMpkPHI9vCkaCCD00YgvWrN9E92EpFnDQ4MaB8s4uJWWZxLJjutI_V4WuPT-M0FJ9CnGBOvyKlunS524rpZeevB-D_HCCMFsNbp1_RTsQU6aVXOQ"/>
+<span class="font-button text-body-sm font-semibold">Google</span>
+</button>
+<button class="flex items-center justify-center gap-sm py-3 px-4 border border-[#EEEEEE] rounded-[16px] bg-white hover:bg-zinc-50 active:scale-95 transition-all">
+<div class="bg-[#1877F2] p-1 rounded-full flex items-center justify-center">
+<svg class="w-3 h-3 text-white fill-current" viewbox="0 0 24 24"><path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.312h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z"></path></svg>
+</div>
+<span class="font-button text-body-sm font-semibold">Facebook</span>
+</button>
+</div>
+<!-- Footer Link -->
+<p class="text-center mt-xl font-body-sm text-on-surface-variant">
+                Don't have an account? 
+                <a class="text-primary font-bold hover:underline" href="#">Join QuickBite</a>
+</p>
+</section>
+</main>
+<!-- FAB Suppression: Login screen is transactional/linear, navigation and FAB are suppressed as per mandate -->
+</body></html>

@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Be+Vietnam+Pro:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-error-container": "#93000a",
+                        "surface-bright": "#fff8f5",
+                        "background": "#fff8f5",
+                        "surface": "#fff8f5",
+                        "secondary-fixed": "#94f990",
+                        "on-secondary-fixed-variant": "#005313",
+                        "on-primary-fixed": "#321200",
+                        "tertiary": "#006399",
+                        "on-secondary-container": "#00731e",
+                        "surface-dim": "#edd5ca",
+                        "surface-container-high": "#fbe3d7",
+                        "inverse-primary": "#ffb68b",
+                        "outline": "#8c7263",
+                        "on-tertiary-fixed": "#001d32",
+                        "on-primary": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "on-primary-fixed-variant": "#753400",
+                        "surface-tint": "#994700",
+                        "on-secondary-fixed": "#002204",
+                        "error": "#ba1a1a",
+                        "on-primary-container": "#5c2800",
+                        "inverse-surface": "#3b2d26",
+                        "tertiary-container": "#00a8ff",
+                        "primary-container": "#ff7a00",
+                        "on-error": "#ffffff",
+                        "on-tertiary-fixed-variant": "#004a75",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-container": "#91f78e",
+                        "primary": "#994700",
+                        "on-secondary": "#ffffff",
+                        "tertiary-fixed-dim": "#95ccff",
+                        "secondary-fixed-dim": "#78dc77",
+                        "on-background": "#251912",
+                        "outline-variant": "#e0c0af",
+                        "on-tertiary-container": "#003a5c",
+                        "on-surface": "#251912",
+                        "on-tertiary": "#ffffff",
+                        "tertiary-fixed": "#cde5ff",
+                        "surface-container-highest": "#f6ded2",
+                        "secondary": "#006e1c",
+                        "primary-fixed": "#ffdbc8",
+                        "primary-fixed-dim": "#ffb68b",
+                        "surface-variant": "#f6ded2",
+                        "inverse-on-surface": "#ffede5",
+                        "on-surface-variant": "#584235",
+                        "surface-container-low": "#fff1ea",
+                        "surface-container": "#ffeadf"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "md": "16px",
+                        "xs": "4px",
+                        "xxl": "48px",
+                        "lg": "24px",
+                        "xl": "32px",
+                        "margin-mobile": "20px",
+                        "sm": "8px",
+                        "gutter": "16px"
+                    },
+                    "fontFamily": {
+                        "body-sm": ["Be Vietnam Pro"],
+                        "caption": ["Plus Jakarta Sans"],
+                        "body-lg": ["Be Vietnam Pro"],
+                        "h1": ["Plus Jakarta Sans"],
+                        "body-md": ["Be Vietnam Pro"],
+                        "h3": ["Plus Jakarta Sans"],
+                        "h2": ["Plus Jakarta Sans"],
+                        "button": ["Plus Jakarta Sans"]
+                    },
+                    "fontSize": {
+                        "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                        "caption": ["12px", {"lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "500"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "h1": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "h3": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                        "h2": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "button": ["16px", {"lineHeight": "24px", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md antialiased">
+<!-- TopNavBar -->
+<header class="sticky top-0 w-full z-50 bg-white/95 dark:bg-zinc-900/95 backdrop-blur-md border-b border-zinc-100 dark:border-zinc-800 shadow-[0_4px_12px_rgba(255,122,0,0.04)]">
+<div class="flex items-center justify-between max-w-7xl mx-auto px-5 h-16">
+<div class="flex items-center gap-12">
+<a class="text-2xl font-black text-orange-500 dark:text-orange-400 tracking-tighter" href="#">QuickBite</a>
+<nav class="hidden md:flex items-center gap-8 font-['Plus_Jakarta_Sans'] text-sm font-medium">
+<a class="text-orange-500 dark:text-orange-400 border-b-2 border-orange-500 pb-1 transform transition-all active:scale-95" href="#">Browse</a>
+<a class="text-zinc-600 dark:text-zinc-400 hover:text-orange-500 dark:hover:text-orange-400 transition-colors duration-200 active:scale-95 transform" href="#">Offers</a>
+<a class="text-zinc-600 dark:text-zinc-400 hover:text-orange-500 dark:hover:text-orange-400 transition-colors duration-200 active:scale-95 transform" href="#">Orders</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<div class="hidden lg:flex items-center bg-zinc-100 dark:bg-zinc-800 rounded-full px-4 py-2 gap-2">
+<span class="material-symbols-outlined text-zinc-400 text-xl" data-icon="search">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm w-48 text-zinc-700" placeholder="Search for food..." type="text"/>
+</div>
+<button class="relative p-2 text-zinc-600 hover:text-orange-500 transition-colors">
+<span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span>
+<span class="absolute top-1 right-1 w-4 h-4 bg-orange-500 text-white text-[10px] flex items-center justify-center rounded-full font-bold">3</span>
+</button>
+<button class="flex items-center gap-2 p-1 pl-3 bg-zinc-50 dark:bg-zinc-800 rounded-full border border-zinc-200 dark:border-zinc-700 hover:shadow-md transition-shadow">
+<span class="text-sm font-semibold text-zinc-700">Login</span>
+<div class="w-8 h-8 rounded-full overflow-hidden">
+<img alt="User Profile" class="w-full h-full object-cover" data-alt="Close-up portrait of a smiling young professional man in a clean white studio setting with soft lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDcfJe3QriB6cn1HQqYPz02xERmn7PJ5gCADrmgvkepUmq_7rtNsWhhwK9oDrs9POE4rI8GjQY2dDwyoAsnZgFrZ--fWyg_OCnBfCV1wz220ZN3PTy5jCgvjX7tAhw-m0o2ZRCjJVzKGYVVyrOg9vGDENEhVoyk4Y8WsGC06V2DIMjBfDv4wEfXn4liWdzUKVcM7rNtysNZ0k6hcbAFxNrSxR2IpQI2lG7lRkiRwDv6cSR23gRBUpV_bVvOxauymtTEyXOBM78wzA"/>
+</div>
+</button>
+</div>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative h-[600px] w-full flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="Gourmet Food" class="w-full h-full object-cover brightness-[0.7]" data-alt="High-angle shot of a variety of colorful gourmet Mediterranean dishes spread across a rustic wooden table with vibrant fresh ingredients" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAEObZ5b4qdwcdj6FiuXUb_fJCJrden8py8xagqe_ITaLC6ysjv54lf3NESulmDQwkpkh8z5qdnDWzLiR265C1r08saItqy8kQwwHsNXuRXnJaI4-sfI_2DhQdHSxNL-tbWP3RbNzfwNhnmkiJsjFV341lpljNPjSnArmHepr7FzEIQUL4k7JIkpLeiledmpXY6dKXmQsg-k4boGZghYFMVY2MMMsLDIC5xpqe9GEKsB6yza_w0NXVx2p1tOXeM6ltjpjOT1jQxlQ"/>
+<div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent"></div>
+</div>
+<div class="relative z-10 max-w-7xl mx-auto px-5 w-full">
+<div class="max-w-2xl">
+<h1 class="font-h1 text-6xl text-white mb-6 leading-[1.1]">Deliciousness<br/>delivered to your<br/><span class="text-primary-container">doorstep.</span></h1>
+<p class="font-body-lg text-zinc-200 mb-xl max-w-lg">Discover the best food and drinks from top-rated local restaurants. Fast delivery, fresh ingredients, and zero hassle.</p>
+<div class="bg-white p-3 rounded-2xl shadow-xl flex items-center gap-3 max-w-xl">
+<div class="flex-1 flex items-center gap-3 px-3">
+<span class="material-symbols-outlined text-primary-container" data-icon="location_on">location_on</span>
+<input class="w-full border-none focus:ring-0 text-zinc-800 font-medium" placeholder="Enter delivery address" type="text"/>
+</div>
+<div class="h-10 w-[1px] bg-zinc-200"></div>
+<button class="bg-primary-container text-white px-8 py-4 rounded-xl font-button hover:bg-orange-600 transition-all active:scale-95 flex items-center gap-2">
+                            Find Food
+                            <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Categories Section -->
+<section class="max-w-7xl mx-auto px-5 mt-xxl">
+<div class="flex items-center justify-between mb-lg">
+<h2 class="font-h2 text-on-surface">Browse Categories</h2>
+<a class="text-primary font-semibold flex items-center gap-1 hover:underline" href="#">View All <span class="material-symbols-outlined text-sm" data-icon="chevron_right">chevron_right</span></a>
+</div>
+<div class="flex gap-md overflow-x-auto hide-scrollbar pb-4 -mx-5 px-5">
+<!-- Category Chips -->
+<div class="flex-shrink-0 flex flex-col items-center gap-3 group cursor-pointer">
+<div class="w-20 h-20 rounded-2xl bg-orange-100 flex items-center justify-center transition-all group-hover:bg-primary-container group-hover:shadow-lg group-hover:-translate-y-1">
+<span class="material-symbols-outlined text-3xl text-primary group-hover:text-white" data-icon="restaurant">restaurant</span>
+</div>
+<span class="font-button text-sm">Fine Dining</span>
+</div>
+<div class="flex-shrink-0 flex flex-col items-center gap-3 group cursor-pointer">
+<div class="w-20 h-20 rounded-2xl bg-zinc-100 flex items-center justify-center transition-all group-hover:bg-primary-container group-hover:shadow-lg group-hover:-translate-y-1">
+<span class="material-symbols-outlined text-3xl text-zinc-600 group-hover:text-white" data-icon="lunch_dining">lunch_dining</span>
+</div>
+<span class="font-button text-sm">Burgers</span>
+</div>
+<div class="flex-shrink-0 flex flex-col items-center gap-3 group cursor-pointer">
+<div class="w-20 h-20 rounded-2xl bg-zinc-100 flex items-center justify-center transition-all group-hover:bg-primary-container group-hover:shadow-lg group-hover:-translate-y-1">
+<span class="material-symbols-outlined text-3xl text-zinc-600 group-hover:text-white" data-icon="local_pizza">local_pizza</span>
+</div>
+<span class="font-button text-sm">Pizza</span>
+</div>
+<div class="flex-shrink-0 flex flex-col items-center gap-3 group cursor-pointer">
+<div class="w-20 h-20 rounded-2xl bg-zinc-100 flex items-center justify-center transition-all group-hover:bg-primary-container group-hover:shadow-lg group-hover:-translate-y-1">
+<span class="material-symbols-outlined text-3xl text-zinc-600 group-hover:text-white" data-icon="ramen_dining">ramen_dining</span>
+</div>
+<span class="font-button text-sm">Asian</span>
+</div>
+<div class="flex-shrink-0 flex flex-col items-center gap-3 group cursor-pointer">
+<div class="w-20 h-20 rounded-2xl bg-zinc-100 flex items-center justify-center transition-all group-hover:bg-primary-container group-hover:shadow-lg group-hover:-translate-y-1">
+<span class="material-symbols-outlined text-3xl text-zinc-600 group-hover:text-white" data-icon="bakery_dining">bakery_dining</span>
+</div>
+<span class="font-button text-sm">Bakery</span>
+</div>
+<div class="flex-shrink-0 flex flex-col items-center gap-3 group cursor-pointer">
+<div class="w-20 h-20 rounded-2xl bg-zinc-100 flex items-center justify-center transition-all group-hover:bg-primary-container group-hover:shadow-lg group-hover:-translate-y-1">
+<span class="material-symbols-outlined text-3xl text-zinc-600 group-hover:text-white" data-icon="icecream">icecream</span>
+</div>
+<span class="font-button text-sm">Desserts</span>
+</div>
+<div class="flex-shrink-0 flex flex-col items-center gap-3 group cursor-pointer">
+<div class="w-20 h-20 rounded-2xl bg-zinc-100 flex items-center justify-center transition-all group-hover:bg-primary-container group-hover:shadow-lg group-hover:-translate-y-1">
+<span class="material-symbols-outlined text-3xl text-zinc-600 group-hover:text-white" data-icon="coffee">coffee</span>
+</div>
+<span class="font-button text-sm">Coffee</span>
+</div>
+<div class="flex-shrink-0 flex flex-col items-center gap-3 group cursor-pointer">
+<div class="w-20 h-20 rounded-2xl bg-zinc-100 flex items-center justify-center transition-all group-hover:bg-primary-container group-hover:shadow-lg group-hover:-translate-y-1">
+<span class="material-symbols-outlined text-3xl text-zinc-600 group-hover:text-white" data-icon="grass">grass</span>
+</div>
+<span class="font-button text-sm">Healthy</span>
+</div>
+</div>
+</section>
+<!-- Popular Near You -->
+<section class="max-w-7xl mx-auto px-5 mt-xxl pb-xxl">
+<h2 class="font-h2 text-on-surface mb-xl">Popular Near You</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-xl">
+<!-- Restaurant Card 1 -->
+<div class="group bg-white rounded-[16px] overflow-hidden border border-zinc-100 hover:shadow-2xl transition-all duration-300">
+<div class="relative h-48">
+<img alt="Burger Joint" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Close-up of a juicy gourmet double cheeseburger with fresh lettuce, tomato, and melting cheese on a toasted brioche bun" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBaGMrnRItbTTIiCfZwUvtrg-eqFh3VJxYnvETbNqXDSE5EURkTs6xfEh8VI3rPGaQ5jajt5ePk_Jwizuk8sAwiAhDukxV5CpQFTJnGuiskVA4ve2j7rtVnZbiKhVrxZoP3Zsm8G0KkttwV8rU1gLvb4KBRTYZez8p85ra7L-l1u2WouoTKwb1tDHKsRhtbpdZ1RrRlFD-mKVet79BcTY30KJsqFA-pg0Hk2rR8TpzeVR15QzCpPUP2Tow4Kz4VH0PTakVO_G2neA"/>
+<div class="absolute top-3 right-3 bg-white/90 backdrop-blur px-2 py-1 rounded-lg flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-orange-500 text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-xs font-bold text-zinc-800">4.8</span>
+</div>
+<div class="absolute bottom-3 left-3 flex gap-2">
+<span class="bg-primary-container text-white text-[10px] font-bold px-2 py-1 rounded-md uppercase tracking-wider">Free Delivery</span>
+</div>
+</div>
+<div class="p-5">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-h3 text-xl group-hover:text-primary transition-colors">The Burger Lab</h3>
+<span class="text-zinc-400 font-body-sm">$$</span>
+</div>
+<p class="text-zinc-500 text-sm mb-4">American • Burgers • Grill</p>
+<div class="flex items-center gap-4 border-t border-zinc-50 pt-4">
+<div class="flex items-center gap-1.5 text-zinc-600">
+<span class="material-symbols-outlined text-lg" data-icon="schedule">schedule</span>
+<span class="text-sm font-medium">15-25 min</span>
+</div>
+<div class="w-1 h-1 rounded-full bg-zinc-300"></div>
+<div class="flex items-center gap-1.5 text-zinc-600">
+<span class="material-symbols-outlined text-lg" data-icon="delivery_dining">delivery_dining</span>
+<span class="text-sm font-medium">Free</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Restaurant Card 2 -->
+<div class="group bg-white rounded-[16px] overflow-hidden border border-zinc-100 hover:shadow-2xl transition-all duration-300">
+<div class="relative h-48">
+<img alt="Pizza Hub" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Traditional wood-fired Neapolitan pizza with fresh buffalo mozzarella, basil leaves, and tomato sauce on a rustic dark surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0U8rRBVftTgxHpARdmwqLtlGnFpdvlc_UOg8eUfObLNSpusdnoaLlA7FBbEKmc7u-PWW8i1DALa5nkza7ONTmlBrBEGrIm8sMqFXlGAp4d3eG_J44rR0jyFuKrPEd8wGKBKkQprJ81hkhOH_QLePAJOFManIctKNPJjZhO5YpKouXDPgdwFh8wPwcP7iIfMq4rYWwctzYSGHDSmG6YwPEmvXz0PvISjX1Gnt6iJpiu-oAUJ8MzLK78-9k0HNCeJbqGRAOqRfGOw"/>
+<div class="absolute top-3 right-3 bg-white/90 backdrop-blur px-2 py-1 rounded-lg flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-orange-500 text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-xs font-bold text-zinc-800">4.5</span>
+</div>
+</div>
+<div class="p-5">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-h3 text-xl group-hover:text-primary transition-colors">Pizza Rustica</h3>
+<span class="text-zinc-400 font-body-sm">$$</span>
+</div>
+<p class="text-zinc-500 text-sm mb-4">Italian • Pizza • Pasta</p>
+<div class="flex items-center gap-4 border-t border-zinc-50 pt-4">
+<div class="flex items-center gap-1.5 text-zinc-600">
+<span class="material-symbols-outlined text-lg" data-icon="schedule">schedule</span>
+<span class="text-sm font-medium">20-35 min</span>
+</div>
+<div class="w-1 h-1 rounded-full bg-zinc-300"></div>
+<div class="flex items-center gap-1.5 text-zinc-600">
+<span class="material-symbols-outlined text-lg" data-icon="delivery_dining">delivery_dining</span>
+<span class="text-sm font-medium">$2.99</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Restaurant Card 3 -->
+<div class="group bg-white rounded-[16px] overflow-hidden border border-zinc-100 hover:shadow-2xl transition-all duration-300">
+<div class="relative h-48">
+<img alt="Health Bowl" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Fresh vibrant Buddha bowl with quinoa, avocado slices, roasted chickpeas, purple cabbage, and a creamy tahini dressing" src="https://lh3.googleusercontent.com/aida-public/AB6AXuArVjRZAOA3kWOFYf3iW5DJGZKArNBg16InIiicTlWcBkGDJePQZsbZLOrWWy4LAmPoeJrpcT3XKDTM2KjPj7fiTRwF2tnyJheQleS1sQShMOOBqX4YwD4UOFf54_JiIThi6a-_QFx15p_nYV7zemXzsHl6gwjiBRy2VpNXcjyftb9HRt-ctM2j7_Dw8G_HkYI0lbi77dJMkMVvWCoXg1B_0llnmm-ojCHosRVviD8u1KPYxCALWwX12CvAX8kmT894hKINgeKZ1g"/>
+<div class="absolute top-3 right-3 bg-white/90 backdrop-blur px-2 py-1 rounded-lg flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-orange-500 text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-xs font-bold text-zinc-800">4.9</span>
+</div>
+<div class="absolute bottom-3 left-3 flex gap-2">
+<span class="bg-secondary text-white text-[10px] font-bold px-2 py-1 rounded-md uppercase tracking-wider">Top Rated</span>
+</div>
+</div>
+<div class="p-5">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-h3 text-xl group-hover:text-primary transition-colors">Green Garden</h3>
+<span class="text-zinc-400 font-body-sm">$$$</span>
+</div>
+<p class="text-zinc-500 text-sm mb-4">Healthy • Vegan • Salads</p>
+<div class="flex items-center gap-4 border-t border-zinc-50 pt-4">
+<div class="flex items-center gap-1.5 text-zinc-600">
+<span class="material-symbols-outlined text-lg" data-icon="schedule">schedule</span>
+<span class="text-sm font-medium">10-20 min</span>
+</div>
+<div class="w-1 h-1 rounded-full bg-zinc-300"></div>
+<div class="flex items-center gap-1.5 text-zinc-600">
+<span class="material-symbols-outlined text-lg" data-icon="delivery_dining">delivery_dining</span>
+<span class="text-sm font-medium">$0.99</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Promotion Section (Bento Style) -->
+<section class="max-w-7xl mx-auto px-5 my-xxl">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-md h-auto md:h-[400px]">
+<div class="md:col-span-2 relative rounded-3xl overflow-hidden bg-primary-container group">
+<img alt="Special Offer" class="absolute inset-0 w-full h-full object-cover mix-blend-overlay opacity-40 group-hover:scale-110 transition-transform duration-700" data-alt="Appetizing close-up of cheesy pizza slice being pulled away from the whole pie, steam rising, high quality commercial food photography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWhvpyX7gSLe4QUVSRkswScoOEMpQDrQqds1k8oWi3wVxSUXmQ-HYPrJ-YVfTj8Pvmd3SwrXQfcHozgj0h0wN7md_SQI7Z7mf-GsNkxO4OqWqGxft749mB-vtctZXX7cWh5om6YcGLVqYPdgRmTV72RAs41TAq9W4yXWGKw1Po70yfjLLEGqzdiXF4cMIBinpJt5aOCgNEk_8jMPXd_2gIO0ncFsTFgVX8ibHbHyNPnuhpBFhCBWGdLytDeL4ol8-usd6FMr1G4Q"/>
+<div class="relative p-10 h-full flex flex-col justify-center text-white">
+<h4 class="text-sm font-bold uppercase tracking-widest mb-4">Exclusive Deal</h4>
+<h2 class="text-4xl font-black mb-6">Get 50% OFF<br/>your first order</h2>
+<div>
+<button class="bg-white text-primary-container font-bold px-8 py-3 rounded-full hover:shadow-xl transition-all active:scale-95">Claim Now</button>
+</div>
+</div>
+</div>
+<div class="md:col-span-1 relative rounded-3xl overflow-hidden bg-secondary group">
+<div class="relative p-8 h-full flex flex-col justify-end text-white z-10">
+<span class="material-symbols-outlined text-4xl mb-4" data-icon="workspace_premium">workspace_premium</span>
+<h3 class="text-xl font-bold mb-2">Join QuickBite Gold</h3>
+<p class="text-sm text-secondary-container">Unlimited free delivery and special discounts.</p>
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+</div>
+<div class="md:col-span-1 bg-surface-container rounded-3xl p-8 flex flex-col justify-center items-center text-center">
+<div class="w-20 h-20 bg-primary-fixed-dim rounded-full flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-3xl text-primary" data-icon="local_mall">local_mall</span>
+</div>
+<h3 class="font-h3 text-on-surface mb-2">Partner with Us</h3>
+<p class="text-on-surface-variant text-sm mb-6">Grow your business by joining our restaurant network.</p>
+<a class="text-primary font-bold border-b-2 border-primary" href="#">Get Started</a>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full rounded-t-3xl mt-12 bg-zinc-50 dark:bg-zinc-950 border-t border-zinc-200 dark:border-zinc-800">
+<div class="max-w-7xl mx-auto px-8 py-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="space-y-6">
+<a class="text-xl font-bold text-zinc-900 dark:text-zinc-50" href="#">QuickBite</a>
+<p class="text-zinc-500 dark:text-zinc-400 font-['Plus_Jakarta_Sans'] text-sm leading-relaxed">
+                    © 2024 QuickBite Inc. Freshness delivered to your doorstep. The fastest way to satisfy your cravings from the best local kitchens.
+                </p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full bg-zinc-200 dark:bg-zinc-800 flex items-center justify-center text-zinc-600 dark:text-zinc-400 hover:bg-primary-container hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined text-xl" data-icon="share">share</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-zinc-200 dark:bg-zinc-800 flex items-center justify-center text-zinc-600 dark:text-zinc-400 hover:bg-primary-container hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined text-xl" data-icon="public">public</span>
+</a>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="space-y-4">
+<h4 class="font-bold text-zinc-900 dark:text-zinc-50">Quick Links</h4>
+<nav class="flex flex-col gap-2">
+<a class="text-zinc-500 dark:text-zinc-400 text-sm hover:text-orange-500 underline decoration-2 underline-offset-4 transition-all duration-300" href="#">About Us</a>
+<a class="text-zinc-500 dark:text-zinc-400 text-sm hover:text-orange-500 underline decoration-2 underline-offset-4 transition-all duration-300" href="#">Partner with Us</a>
+<a class="text-zinc-500 dark:text-zinc-400 text-sm hover:text-orange-500 underline decoration-2 underline-offset-4 transition-all duration-300" href="#">Terms of Service</a>
+</nav>
+</div>
+<div class="space-y-4 pt-10">
+<nav class="flex flex-col gap-2">
+<a class="text-zinc-500 dark:text-zinc-400 text-sm hover:text-orange-500 underline decoration-2 underline-offset-4 transition-all duration-300" href="#">Privacy Policy</a>
+<a class="text-zinc-500 dark:text-zinc-400 text-sm hover:text-orange-500 underline decoration-2 underline-offset-4 transition-all duration-300" href="#">Contact Support</a>
+</nav>
+</div>
+</div>
+<div class="space-y-6">
+<h4 class="font-bold text-zinc-900 dark:text-zinc-50">Download App</h4>
+<div class="flex flex-col gap-3">
+<a class="bg-zinc-900 text-white px-6 py-3 rounded-xl flex items-center gap-3 hover:bg-zinc-800 transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="phone_iphone">phone_iphone</span>
+<div class="text-left">
+<p class="text-[10px] uppercase font-bold text-zinc-400">Download on the</p>
+<p class="text-sm font-bold">App Store</p>
+</div>
+</a>
+<a class="bg-zinc-900 text-white px-6 py-3 rounded-xl flex items-center gap-3 hover:bg-zinc-800 transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="play_arrow">play_arrow</span>
+<div class="text-left">
+<p class="text-[10px] uppercase font-bold text-zinc-400">Get it on</p>
+<p class="text-sm font-bold">Google Play</p>
+</div>
+</a>
+</div>
+</div>
+</div>
+</footer>
+</body></html>
