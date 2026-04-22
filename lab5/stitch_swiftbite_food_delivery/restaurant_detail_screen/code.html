@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Be+Vietnam+Pro:wght@400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "background": "#fff8f5",
+                    "on-background": "#251912",
+                    "on-primary": "#ffffff",
+                    "surface-container-low": "#fff1ea",
+                    "primary-fixed": "#ffdbc8",
+                    "on-error": "#ffffff",
+                    "surface-dim": "#edd5ca",
+                    "surface-container": "#ffeadf",
+                    "inverse-on-surface": "#ffede5",
+                    "surface-tint": "#994700",
+                    "secondary-container": "#91f78e",
+                    "error": "#ba1a1a",
+                    "error-container": "#ffdad6",
+                    "tertiary": "#006399",
+                    "primary-fixed-dim": "#ffb68b",
+                    "on-surface": "#251912",
+                    "primary": "#994700",
+                    "on-surface-variant": "#584235",
+                    "on-primary-fixed-variant": "#753400",
+                    "surface-container-high": "#fbe3d7",
+                    "inverse-primary": "#ffb68b",
+                    "on-secondary-fixed": "#002204",
+                    "surface-bright": "#fff8f5",
+                    "surface-variant": "#f6ded2",
+                    "secondary-fixed-dim": "#78dc77",
+                    "inverse-surface": "#3b2d26",
+                    "on-secondary-container": "#00731e",
+                    "surface-container-lowest": "#ffffff",
+                    "on-tertiary-container": "#003a5c",
+                    "on-primary-container": "#5c2800",
+                    "primary-container": "#ff7a00",
+                    "outline-variant": "#e0c0af",
+                    "on-primary-fixed": "#321200",
+                    "surface-container-highest": "#f6ded2",
+                    "outline": "#8c7263",
+                    "on-secondary": "#ffffff",
+                    "tertiary-fixed-dim": "#95ccff",
+                    "on-tertiary-fixed-variant": "#004a75",
+                    "secondary": "#006e1c",
+                    "tertiary-container": "#00a8ff",
+                    "on-error-container": "#93000a",
+                    "on-secondary-fixed-variant": "#005313",
+                    "secondary-fixed": "#94f990",
+                    "on-secondary": "#ffffff",
+                    "tertiary-fixed": "#cde5ff",
+                    "on-tertiary-fixed": "#001d32",
+                    "surface": "#fff8f5"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "md": "16px",
+                    "sm": "8px",
+                    "gutter": "16px",
+                    "margin-mobile": "20px",
+                    "xs": "4px",
+                    "xxl": "48px",
+                    "xl": "32px",
+                    "lg": "24px"
+            },
+            "fontFamily": {
+                    "h1": ["Plus Jakarta Sans"],
+                    "body-md": ["Be Vietnam Pro"],
+                    "h3": ["Plus Jakarta Sans"],
+                    "caption": ["Plus Jakarta Sans"],
+                    "h2": ["Plus Jakarta Sans"],
+                    "button": ["Plus Jakarta Sans"],
+                    "body-sm": ["Be Vietnam Pro"],
+                    "body-lg": ["Be Vietnam Pro"]
+            },
+            "fontSize": {
+                    "h1": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "h3": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                    "caption": ["12px", {"lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "500"}],
+                    "h2": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "button": ["16px", {"lineHeight": "24px", "fontWeight": "600"}],
+                    "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .filled-icon {
+            font-variation-settings: 'FILL' 1;
+        }
+        ::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body-md min-h-screen">
+<!-- Top Navigation Anchor (Shared Component Logic) -->
+<header class="bg-white/90 dark:bg-zinc-900/90 backdrop-blur-md docked full-width top-0 z-50 fixed flex justify-between items-center w-full px-5 py-4">
+<div class="flex items-center gap-3">
+<button class="hover:bg-zinc-100 dark:hover:bg-zinc-800 rounded-full transition-colors p-2 active:scale-95 transition-transform duration-200">
+<span class="material-symbols-outlined text-on-background">arrow_back</span>
+</button>
+<h1 class="font-h2 text-h2 tracking-tighter text-on-background">Bella Napoli</h1>
+</div>
+<div class="flex gap-2">
+<button class="hover:bg-zinc-100 dark:hover:bg-zinc-800 rounded-full transition-colors p-2 active:scale-95 transition-transform duration-200">
+<span class="material-symbols-outlined text-on-background">share</span>
+</button>
+<button class="hover:bg-zinc-100 dark:hover:bg-zinc-800 rounded-full transition-colors p-2 active:scale-95 transition-transform duration-200">
+<span class="material-symbols-outlined text-orange-500 filled-icon" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</button>
+</div>
+</header>
+<main class="pb-32">
+<!-- Hero Section -->
+<section class="relative w-full h-80 pt-16">
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent z-10"></div>
+<img alt="Authentic Neapolitan Margherita Pizza" class="w-full h-full object-cover" data-alt="Close-up of a rustic Margherita pizza with bubbling mozzarella, fresh basil leaves, and vibrant tomato sauce on a charred crust." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAt1TEwyLWgEeoZKixvtdN-uCGb6e_qndnYm5teH5fFph7K9bCNwfPVBh2m7f_6O5COb21Gmaa7mUxzDkgOv-QZAxM0oFFu0VG_DLcZ3Fr3sxdFRLFrsHY7CmISnfQuAC5aNERM-gboWT6Db4GV4l-Av2g9KS9MJy9qwXB4vwe3dKdNonhiguTDloy9wxW7y_WKSgmaIJtw13wlHCLofDwwKfX0DDjkSvV2P8CB58qPWWxUi9nfadjWwFQlXSTGE8JELN0XVkhmEQ"/>
+<div class="absolute bottom-6 left-6 z-20">
+<span class="bg-primary-container text-on-primary-container px-3 py-1 rounded-full text-caption font-bold shadow-lg">AUTHENTIC ITALIAN</span>
+</div>
+</section>
+<!-- Info Section -->
+<section class="px-margin-mobile -mt-10 relative z-30">
+<div class="bg-surface-container-lowest rounded-[32px] p-6 shadow-[0_8px_20px_rgba(0,0,0,0.06)] border border-outline-variant/30">
+<div class="flex justify-between items-start mb-4">
+<div>
+<h2 class="font-h1 text-h1 text-on-background">Bella Napoli</h2>
+<p class="font-body-sm text-outline flex items-center gap-1 mt-1">
+<span class="material-symbols-outlined text-sm">location_on</span>
+                            Via dei Tribunali, Naples
+                        </p>
+</div>
+<div class="bg-surface-container-low px-4 py-2 rounded-2xl flex items-center gap-1">
+<span class="material-symbols-outlined text-orange-500 filled-icon" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-h3 text-h3">4.9</span>
+</div>
+</div>
+<div class="flex items-center gap-6 py-2">
+<div class="flex items-center gap-2">
+<div class="w-10 h-10 rounded-full bg-secondary/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary">delivery_dining</span>
+</div>
+<div>
+<p class="text-caption text-outline uppercase font-bold">Delivery</p>
+<p class="font-button text-button text-on-background">Free</p>
+</div>
+</div>
+<div class="w-px h-10 bg-outline-variant/30"></div>
+<div class="flex items-center gap-2">
+<div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">schedule</span>
+</div>
+<div>
+<p class="text-caption text-outline uppercase font-bold">Time</p>
+<p class="font-button text-button text-on-background">20-30 mins</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Category Tabs -->
+<nav class="flex gap-4 overflow-x-auto px-margin-mobile py-8 no-scrollbar">
+<button class="bg-primary-container text-on-primary-container px-6 py-3 rounded-2xl font-button whitespace-nowrap shadow-md">Popular Items</button>
+<button class="bg-surface-container text-on-surface-variant px-6 py-3 rounded-2xl font-button whitespace-nowrap hover:bg-surface-container-high transition-colors">Wood-Fired Pizza</button>
+<button class="bg-surface-container text-on-surface-variant px-6 py-3 rounded-2xl font-button whitespace-nowrap hover:bg-surface-container-high transition-colors">Pasta</button>
+<button class="bg-surface-container text-on-surface-variant px-6 py-3 rounded-2xl font-button whitespace-nowrap hover:bg-surface-container-high transition-colors">Desserts</button>
+</nav>
+<!-- Menu Section: Popular Items -->
+<section class="px-margin-mobile space-y-md">
+<div class="flex justify-between items-center mb-2">
+<h3 class="font-h2 text-h2">Popular Items</h3>
+<span class="text-primary font-button">See all</span>
+</div>
+<!-- Bento-style Grid for Popular Items -->
+<div class="grid grid-cols-1 gap-md">
+<!-- Menu Item 1 -->
+<div class="bg-surface-container-lowest rounded-[24px] overflow-hidden flex p-3 border border-outline-variant/20 shadow-sm hover:shadow-md transition-shadow group">
+<div class="relative w-28 h-28 rounded-2xl overflow-hidden flex-shrink-0">
+<img alt="Classic Margherita" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Traditional margherita pizza slice with melted mozzarella and fresh basil on a rustic wood background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDMR-KettHWUfbaK5I6B7o5JEflX7T5t804EVx6yroySJ3mRuymSyHKNVBL7iaoLRuHOFyg6mpc2BsfwqpNwsDBLn2ltAeZgIylHSttiybCO7X9ItVqTJWUsIInwli32BmB0_nKIr1dj86Mb8JsLoaxM17FRir3oZQBdbvZHyCXvYnox0vFwPeFmarcsbuCmK7xq1lO3kKpsojVjXK7bttS0FD-2ktzalalE-CmWIa3yyKCWx5MVVxObFA9qCjzwC_XLi19p4bLVQ"/>
+</div>
+<div class="flex flex-col justify-between ml-4 flex-grow py-1">
+<div>
+<div class="flex justify-between items-start">
+<h4 class="font-h3 text-h3 text-on-background">Classic Margherita</h4>
+<span class="font-h3 text-h3 text-primary">$12.00</span>
+</div>
+<p class="font-body-sm text-on-surface-variant line-clamp-2 mt-1">San Marzano tomatoes, fresh mozzarella, basil, and extra virgin olive oil.</p>
+</div>
+<div class="flex justify-end">
+<button class="w-10 h-10 rounded-xl bg-primary text-on-primary flex items-center justify-center shadow-lg active:scale-90 transition-transform">
+<span class="material-symbols-outlined">add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Menu Item 2 -->
+<div class="bg-surface-container-lowest rounded-[24px] overflow-hidden flex p-3 border border-outline-variant/20 shadow-sm hover:shadow-md transition-shadow group">
+<div class="relative w-28 h-28 rounded-2xl overflow-hidden flex-shrink-0">
+<img alt="Spicy Diavola" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Delicious pepperoni pizza with spicy salami slices and melted cheese on a thick crust." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCH756a51XTmb64mq0DauSYRJzeqG6zIcxNRQLcpRTidcnB1zNdq2MSypTVbaXFBDdzFWWk35Ndfs4EzLJLoWbtl6hnTpqSaFhfHT5RYRKMvLnhceFxTmFYRSVSrhQcirYwXgaTAnxz29gczzspFWd4CiZXn6Y5PGETTHrYCSrsOrIGAQfRkhH5zDStyVE239iK94Z92HS5rQLEgHm2mhUHrKoBjDOUV4bAvNVLJvTJCC4LmlPrwSOLONnztqN6bCeTkmNcgLLLaQ"/>
+</div>
+<div class="flex flex-col justify-between ml-4 flex-grow py-1">
+<div>
+<div class="flex justify-between items-start">
+<h4 class="font-h3 text-h3 text-on-background">Spicy Diavola</h4>
+<span class="font-h3 text-h3 text-primary">$14.50</span>
+</div>
+<p class="font-body-sm text-on-surface-variant line-clamp-2 mt-1">Spicy Neapolitan salami, chili flakes, mozzarella, and tomato base.</p>
+</div>
+<div class="flex justify-end">
+<button class="w-10 h-10 rounded-xl bg-primary text-on-primary flex items-center justify-center shadow-lg active:scale-90 transition-transform">
+<span class="material-symbols-outlined">add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Menu Item 3 -->
+<div class="bg-surface-container-lowest rounded-[24px] overflow-hidden flex p-3 border border-outline-variant/20 shadow-sm hover:shadow-md transition-shadow group">
+<div class="relative w-28 h-28 rounded-2xl overflow-hidden flex-shrink-0">
+<img alt="Truffle Tagliatelle" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A bowl of creamy carbonara pasta with pancetta, egg yolk, and black pepper." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzkWsZmSWpCP2bGR2rbeW1nQUUhpZv3c5lrqkoQLZqv0V2b58sHVeEShdJaJ9jZ6VoAaxGeTNUa0fNycOLTxELRs2ZD6ORfYz-d-DVwL58YiH7EbEIbGmdFM6tBQeG4LE1sMuKpvNON4c2Rg70gFput2cjqjUvJitjHeyQzi9x-JryWmAMMeIJ5icFmptWoRt0g91pBJnwGnmJ_6G4CaR-Gk98N-AJITv900_UTjdjptzyRM8hKi3GpWJ7rpx5kYntYXxFsfQ9VA"/>
+</div>
+<div class="flex flex-col justify-between ml-4 flex-grow py-1">
+<div>
+<div class="flex justify-between items-start">
+<h4 class="font-h3 text-h3 text-on-background">Truffle Tagliatelle</h4>
+<span class="font-h3 text-h3 text-primary">$18.00</span>
+</div>
+<p class="font-body-sm text-on-surface-variant line-clamp-2 mt-1">Fresh egg pasta with black truffle cream and aged parmesan.</p>
+</div>
+<div class="flex justify-end">
+<button class="w-10 h-10 rounded-xl bg-primary text-on-primary flex items-center justify-center shadow-lg active:scale-90 transition-transform">
+<span class="material-symbols-outlined">add</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- More Items Section -->
+<section class="px-margin-mobile mt-xl space-y-md">
+<h3 class="font-h2 text-h2">Desserts</h3>
+<div class="grid grid-cols-2 gap-md">
+<div class="bg-surface-container-lowest rounded-[24px] p-3 border border-outline-variant/20 shadow-sm">
+<div class="h-32 w-full rounded-2xl overflow-hidden mb-3">
+<img alt="Classic Tiramisu" class="w-full h-full object-cover" data-alt="Authentic Italian tiramisu with layers of coffee-soaked ladyfingers and mascarpone cream, dusted with cocoa powder." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAdgqVWrsmIjfg8W0OXDYR-op0Zpx4Jzn83txAiIAIuYa6rRcrcnbZIuVbMnRz3Coc4lXGKxdUqy7-XlFwHgMz8pIyQADakdk2OQtdEf36nzi9KxhNK_zvR48dCt8f5FOao_RINR9V3Wl9r-bEtPqWYc1gdOEn70JnCuMm6YPxmkB0MuPj59svURlEDSNeZ-BYq3wkcGtexmumTbQnLbNNc-GBBiJQTCapR0tTG3pgPmyp8VUzJuM_GbHAOw3ltK-vY7hWzgOEH6A"/>
+</div>
+<h4 class="font-button text-button text-on-background">Tiramisu</h4>
+<p class="text-primary font-h3">$8.00</p>
+</div>
+<div class="bg-surface-container-lowest rounded-[24px] p-3 border border-outline-variant/20 shadow-sm">
+<div class="h-32 w-full rounded-2xl overflow-hidden mb-3">
+<img alt="Berry Panna Cotta" class="w-full h-full object-cover" data-alt="Creamy panna cotta topped with a vibrant berry coulis and a sprig of fresh mint." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwQaGf4NtWEZkg3-CQSSUmsAV5eag3JxB2NG5AmN-uilb0yOJlQp2_1z2QbJRZi54MjDUMZeCJwxaEnim_BaoOcuJqx8E_vdTEvhlNoBa0jelWDaEP-BMWfM0gc9M7-AqDP7R9dOyoHRtn-JbRiYbzT8khdWKJXiHh-XQzS6TlEYaeK0oegvPHKMbvSVM2n-UjK5sJHto16shIhG9zvmXa3x7wv6qOboqDYYnrwhSOORDj_7YgDi1OjAizMP4MteWDdTTF_IliWw"/>
+</div>
+<h4 class="font-button text-button text-on-background">Panna Cotta</h4>
+<p class="text-primary font-h3">$7.50</p>
+</div>
+</div>
+</section>
+</main>
+<!-- Persistent Floating Cart Action Bar -->
+<div class="fixed bottom-0 left-0 w-full p-margin-mobile z-50 pointer-events-none">
+<div class="max-w-md mx-auto pointer-events-auto">
+<button class="w-full bg-primary-container text-on-primary-container rounded-[24px] py-4 px-6 flex justify-between items-center shadow-[0_12px_30px_rgba(255,122,0,0.3)] active:scale-[0.98] transition-all group">
+<div class="flex items-center gap-3">
+<div class="bg-on-primary-container/20 w-10 h-10 rounded-xl flex items-center justify-center">
+<span class="material-symbols-outlined text-on-primary-container filled-icon" style="font-variation-settings: 'FILL' 1;">shopping_bag</span>
+</div>
+<span class="font-button text-button">View Cart (2 items)</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-h2 text-h2">$24.00</span>
+<span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</button>
+</div>
+</div>
+<!-- Bottom Navigation Shell (Filter Logic: Hide on sub-pages, but included for structure reference as per prompt "consistent with Home styling" but usually suppressed on details. Keeping as per prompt requirements for shared component demonstration) -->
+<nav class="hidden md:flex fixed bottom-0 left-0 w-full z-40 bg-white dark:bg-zinc-900 border-t border-zinc-100 dark:border-zinc-800 justify-around items-center px-4 pb-6 pt-3 shadow-[0_-4px_12px_rgba(0,0,0,0.04)] rounded-t-[32px]">
+<div class="flex flex-col items-center justify-center text-orange-500 dark:text-orange-400 bg-orange-50 dark:bg-orange-900/20 rounded-2xl px-4 py-2">
+<span class="material-symbols-outlined filled-icon" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="font-plus-jakarta-sans text-[11px] font-semibold">Home</span>
+</div>
+<div class="flex flex-col items-center justify-center text-zinc-400 dark:text-zinc-500 px-4 py-2">
+<span class="material-symbols-outlined">search</span>
+<span class="font-plus-jakarta-sans text-[11px] font-semibold">Search</span>
+</div>
+<div class="flex flex-col items-center justify-center text-zinc-400 dark:text-zinc-500 px-4 py-2">
+<span class="material-symbols-outlined">shopping_bag</span>
+<span class="font-plus-jakarta-sans text-[11px] font-semibold">Orders</span>
+</div>
+<div class="flex flex-col items-center justify-center text-zinc-400 dark:text-zinc-500 px-4 py-2">
+<span class="material-symbols-outlined">person</span>
+<span class="font-plus-jakarta-sans text-[11px] font-semibold">Profile</span>
+</div>
+</nav>
+</body></html>
